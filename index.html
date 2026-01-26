@@ -1,0 +1,2707 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ultimate Fallout — HUD Config Hub</title>
+  <style>
+    :root{
+      --bg:#0B0D0F;
+      --panel:#11161A;
+      --text:#CFE7E0;
+      --muted:#9AA6AD;
+      --accent:#1BFF80;
+      --accent2:#FFB641;
+      --border:#1e2a24;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font:14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:18px 14px 40px;
+    }
+    header{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      margin-bottom:14px;
+    }
+    h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:.4px;
+    }
+    .sub{color:var(--muted); margin:0;}
+    .hint{color:var(--muted); font-size:12px; margin-top:6px;}
+
+    details{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:12px;
+      margin:10px 0;
+      overflow:hidden;
+    }
+    summary{
+      cursor:pointer;
+      padding:14px 14px;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    summary::-webkit-details-marker{display:none}
+    .title{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      min-width:0;
+    }
+    .title strong{
+      font-size:15px;
+      font-weight:700;
+      color:var(--accent);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .title a{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:12px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      display:inline-block;
+      max-width:100%;
+    }
+    .actions{
+      display:flex;
+      gap:8px;
+      flex-shrink:0;
+    }
+    button{
+      border:1px solid var(--border);
+      background:#0f1417;
+      color:var(--text);
+      padding:8px 10px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:600;
+    }
+    button.primary{
+      border-color:rgba(27,255,128,.35);
+      color:#0B0D0F;
+      background:var(--accent);
+    }
+    button.secondary{
+      border-color:rgba(255,182,65,.35);
+      background:#17130c;
+      color:var(--accent2);
+    }
+
+    .content{
+      padding:0 14px 14px;
+      border-top:1px solid var(--border);
+    }
+    .desc{
+      color:var(--muted);
+      font-size:12px;
+      margin:10px 0 10px;
+    }
+
+    /* FIX: use textarea so characters like < and & are not parsed as HTML */
+    textarea.cfg{
+      width:100%;
+      min-height:220px;
+      resize:vertical;
+      margin:0;
+      padding:12px;
+      background:#0f1417;
+      border:1px solid var(--border);
+      border-radius:10px;
+      overflow:auto;
+      color:var(--text);
+      font:12px/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      white-space:pre;
+      outline:none;
+    }
+
+    .toast{
+      position:fixed;
+      left:50%;
+      bottom:18px;
+      transform:translateX(-50%);
+      background:#0f1417;
+      border:1px solid var(--border);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .15s ease;
+      font-size:12px;
+    }
+    .toast.show{opacity:1}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Ultimate Fallout — HUD Config Hub</h1>
+      <p class="sub">Expand a mod, then click “Copy config” to copy only that config.</p>
+      <p class="hint">Paste each config inside its box. This template avoids missing text caused by HTML parsing.</p>
+    </header>
+
+    <!-- 953 -->
+    <details open>
+      <summary>
+        <div class="title">
+          <strong>HUDEditor – iHUD</strong>
+          <a href="https://www.nexusmods.com/fallout76/mods/953" target="_blank" rel="noreferrer">nexusmods.com/fallout76/mods/953</a>
+        </div>
+        <div class="actions">
+          <button class="primary" data-copy-target="cfg-953">Copy config</button>
+          <button class="secondary" data-open="#cfg-953">Jump</button>
+        </div>
+      </summary>
+      <div class="content">
+        <div class="desc">Copy tip: click “Copy config”. (Ctrl+A selects the whole page in embeds.)</div>
+        <textarea id="cfg-953" class="cfg" readonly spellcheck="false"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<HUDEditor>
+
+	<Mod_Options>
+	
+		<!--EditMode allows you to view changes to this file in real time-->
+		<EditMode>true</EditMode>
+		
+		<!-- 
+			No Clue Why the Default is 1.5. 
+			Change at your Own Risk.
+		-->
+		<MaxScale>1.5</MaxScale>
+		
+		<!-- 
+			Message Verifying the Mod is Working
+			on Hud Load.
+			Leave the Sound Section Empty if You Want to Disable Sound
+		-->
+		<StartupMsg>
+			<Enable>true</Enable>
+			<Delay>60000</Delay>
+			<Sound>UIPerkIdiotSavantLAYERfemale</Sound>
+		</StartupMsg>
+		
+		<!-- 
+			Message Verifying the Mod is Working
+			on Hud Load.
+			Leave the Sound Section Empty if You Want to Disable Sound
+		-->
+		<StartupMsg>
+			<Enable>true</Enable>
+			<Delay>60000</Delay>
+			<Sound>UIPerkIdiotSavantLAYERfemale</Sound>
+		</StartupMsg>
+		
+		<!--Settings for HUD Editor WaterMark in the Upper Right-->
+		<WaterMark>
+			<!--Settings for Default HUD Editor WaterMark-->
+			<HideDefault>true</HideDefault>
+			<CustomWaterMark>true</CustomWaterMark>
+				<CustomWaterMarkEntry>Like And Subscribe</CustomWaterMarkEntry>
+			<!--Settings for HUD Editor Edit Mode WaterMark-->
+			<HideEditMode>true</HideEditMode>
+			<CustomEditMark>true</CustomEditMark>
+				<CustomEditMarkEntry>Edit Mode Enabled</CustomEditMarkEntry>
+		</WaterMark>
+		
+	</Mod_Options>
+	
+	<Reposition_Elements>
+		
+		<!--
+			All X and Y positions are relative to their default position on the HUD.
+			Scale is the Size of the Obj
+			X is Left and Right
+			Y is Up and Down.
+			PowerArmor is when you use the Power Armor Hud [Toggleable in the Game Settings]
+		-->
+		
+		<!--Bar Showing Your Crit Charge in Vats-->
+			<CritMeter>
+				<Scale>.75</Scale>
+				<X>-15</X>
+				<Y>-675</Y>
+			</CritMeter>
+		
+		<!-- Direction and Map Marker Indicator -->
+			<Compass>
+				<Scale>.75</Scale>
+				<X>0</X>
+				<Y>-970</Y>
+			</Compass>
+		
+		<!--Hp Bar For Targeted Enemy-->
+			<EnemyHealthMeter>
+				<Scale>.75</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</EnemyHealthMeter>
+		
+		<!--Top Right List of Active Quests Tagged in Pipboy Questlog-->
+			<QuestTracker>
+				<Scale>.75</Scale>
+				<X>35</X>
+				<Y>-20</Y>
+			</QuestTracker>
+		
+		<!--Sneaking Meter (Hidden, Danger, etc)-->
+			<StealthMeter>
+				<Scale>.75</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</StealthMeter>
+		
+		<!-- List of Players on Your Team-->
+			<TeamPanel>
+				<Scale>.65</Scale>
+				<X>-63</X>
+				<Y>-480</Y>
+				<PowerArmor>
+					<Scale>1</Scale>
+					<X>0</X>
+					<Y>0</Y>
+				</PowerArmor>
+			</TeamPanel>
+		
+        <!-- Pop-Up when You Shoot Something -->
+			<HitMarker>
+				<Scale>.75</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</HitMarker>
+		
+		<InteractPrompts>
+			
+		<!--Quickloot, annoyingly, applies to some containers rollover-->
+			<QuickLoot>
+				<Scale>.70</Scale>
+				<X>-250</X>
+				<Y>210</Y>
+			</QuickLoot>
+			
+		<!--Frobber are interact prompts like unlicking locked doors and interacting with NPCs-->
+			<Frobber>
+				<Scale>.70</Scale>
+				<X>66</X>
+				<Y>220</Y>
+			</Frobber>
+			
+		<!--RollOver is essentially the same as Frobber (interact prompts)-->
+			<RollOver>
+				<Scale>.70</Scale>
+				<X>-287</X>
+				<Y>90</Y>
+			</RollOver>
+			
+		</InteractPrompts>
+		
+		<HUD_Notifications>
+		
+		<!-- quest/event complete/rewards list -->
+			<Announce>
+				<Scale>.75</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</Announce>
+			
+		<!--Area/Team Voice Chat Indicator that List Players Talking Around You-->		
+			<AreaVoiceList>
+				<Scale>.75</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</AreaVoiceList>
+			
+		<!-- Popup When You Gain / Lose Gold, Caps, Scrip, Ect. -->
+			<CurrencyUpdates>
+				<Scale>.50</Scale>
+				<X>-70</X>
+				<Y>250</Y>
+			</CurrencyUpdates>
+			
+		<!-- Small Emote Circle on the Lower Left Side of your Screen-->	
+			<Emote>
+				<Scale>.50</Scale>
+				<X>980</X>
+				<Y>-80</Y>
+			</Emote>
+			
+		<!--
+			Pop-up When Your Current Fusion Core Is Low or Empty,
+			And You Have No Spares
+		-->
+			<FusionCoreWarning>
+				<Scale>.75</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</FusionCoreWarning>
+		
+		<!-- Pop-up Showing Your New Level -->		
+			<LevelUpAnimation>
+				<Scale>.75</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</LevelUpAnimation>
+			
+		<!--Notifications are Pop-Ups Like Sneak damage, New Radio Signels, And World Event Msg Boxes-->
+			<Notification>
+				<Scale>.75</Scale>
+				<X>245</X>
+				<Y>-60</Y>
+			</Notification>
+		
+		<!-- 
+				Pop-up When Perk Activates Such as
+				Ricochet, Nerd Rage, Ect. 
+				Dosnt Effect the Sound 
+		-->
+			<PerkPopUp>
+				<Scale>.50</Scale>
+				<X>-80</X>
+				<Y>500</Y>
+			</PerkPopUp>
+			
+		<!-- Pop-Up When Taking Rad Dmg-->
+			<RadDamageIndicator>
+				<Scale>.50</Scale>
+				<X>-115</X>
+				<Y>35</Y>
+			</RadDamageIndicator>
+			
+		<!-- Change in Faction Rep Pop-Up -->
+			<ReputationUpdates>
+				<Scale>.75</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</ReputationUpdates>
+		
+		<!-- Description of Onscreen Voicelines -->		
+			<Subtitles>
+				<Scale>.75</Scale>
+				<X>0</X>
+				<Y>50</Y>
+			</Subtitles>
+		
+		<!-- Pop-Up Showing XP Gained from Action -->	
+			<XPBar>
+				<Scale>.75</Scale>
+				<X>40</X>
+				<Y>225</Y>
+			</XPBar>
+			
+		</HUD_Notifications>
+		
+		<LeftMeters>
+			
+		<!-- 
+			Bar Shown in PA When PA HUD is Set to False
+			Tracks Fusion Core % and Amount.
+			Auto Detects if in Proper Hud / Class.
+		-->		
+			<FusionCoreMeter>
+				<Scale>1</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</FusionCoreMeter>
+			
+		<!-- Bar Showing Your Current Health -->	
+			<HpMeter>
+				<Scale>.75</Scale>
+				<X>-20</X>
+				<Y>0</Y>
+			</HpMeter>
+			
+		<!--
+			Bar for Ghouls that Shows Current Glow Level
+			Only Applies if Your Ghoul Class, Auto Detects
+		-->
+			<GlowMeter>
+				<Scale>1</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</GlowMeter>
+			
+		</LeftMeters>
+		
+		<RightMeters>
+			
+		<!--
+			Displayed Effects on the Bottom Right.
+			Overweight, Addiction, Mutations, Buffs, Ect.
+		-->
+			<ActiveEffects>
+				<Scale>.50</Scale>
+				<X>-1644</X>
+				<Y>-52</Y>
+				<PowerArmor>
+					<X>0</X>
+					<Y>0</Y>
+				</PowerArmor>
+			</ActiveEffects>
+			
+		<!-- Shows Current Amount of Ammo in Selected Gun -->	
+			<AmmoCount>
+				<Scale>0.40</Scale>
+				<X>-1583</X>
+				<Y>87</Y>
+			</AmmoCount>
+		
+		<!-- Bar Showing Current Ap Total -->
+			<APMeter>
+				<Scale>.75</Scale>
+				<X>-1469</X>
+				<Y>20</Y>
+			</APMeter>
+			
+		<!-- Grenade / Throwable Counter -->
+			<ExplosiveAmmoCount>
+				<Scale>.5</Scale>
+				<X>-1350</X>
+				<Y>195</Y>
+				<PowerArmor>
+					<X>0</X>
+					<Y>0</Y>
+				</PowerArmor>
+			</ExplosiveAmmoCount>
+			
+		<!--
+			Bar for Ghouls that Shows Current Feral Level
+			Only Applies if Your Ghoul Class, Auto Detects
+		-->
+			<FeralMeter>
+				<Scale>1</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</FeralMeter>
+		
+		<!--
+			Bar used by the V63 Carbine Weapon
+			to Show Charge Level
+		-->
+			<OverHeatMeter>
+				<Scale>.50</Scale>
+				<X>0</X>
+				<Y>225</Y>
+			</OverHeatMeter>
+		
+		<!--
+			Bar Showing Current Hunger Level
+			For Human Class Only, Auto Detects.
+		-->
+			<HungerMeter>
+				<Scale>.75</Scale>
+				<X>-1356</X>
+				<Y>100</Y>
+				<PowerArmor>
+					<Scale>1</Scale>
+					<X>0</X>
+					<Y>0</Y>
+				</PowerArmor>
+			</HungerMeter>
+			
+		<!--
+			Bar Showing Current Thirst Level
+			For Human Class Only, Auto Detects.
+		-->	
+			<ThirstMeter>
+				<Scale>.75</Scale>
+				<X>-1414</X>
+				<Y>100</Y>
+				<PowerArmor>
+					<Scale>1</Scale>
+					<X>0</X>
+					<Y>0</Y>
+				</PowerArmor>
+			</ThirstMeter>
+			
+		</RightMeters>
+		
+	</Reposition_Elements>
+	
+	<OtherImprovements>
+		
+		<APMeter>
+		
+		<!-- Shows/hides the AP bar background -->
+			<ShowBG>true</ShowBG>
+			
+			<APLabel>
+			<!-- Setting to False Removes the Ap Label -->
+				<Show>false</Show>
+		
+			<!-- Replaces the the "AP" text to the right of the AP Meter -->
+				<CustomText>
+					<Enable>true</Enable>
+					<Text>AP</Text>
+				</CustomText>
+			<!-- Use X -350 to Set it to the Left Side -->
+				<Scale>1</Scale>
+				<X>-410</X>
+				<Y>0</Y>
+			</APLabel>
+			
+		</APMeter>
+		
+		<Crosshair>
+
+		<!--You can set the opacity of the crosshair down below what the rest of the HUD is.-->
+			<CrosshairOpacity>.5</CrosshairOpacity>
+		
+		</Crosshair>
+		
+		<!--
+			Shows health percentage near the bar, a la Show Health
+			Link to Original Mod: https://www.nexusmods.com/fallout76/mods/183
+			Latest Fork: https://www.nexusmods.com/fallout76/mods/1382
+				
+		-->
+		<EnemyHealthMeter>
+			<ShowHealthPercent>false</ShowHealthPercent>
+			<!-- 
+				Sets Postion to Either:
+				top, bottom, left, right 
+			-->
+			<HealthPercentLocation>top</HealthPercentLocation>
+		</EnemyHealthMeter>
+		
+		<!--
+			There is no FlashLight icon in Fallout 76 by default...
+			Enable this setting to restore it and enable scaling and moving it
+		-->
+		<FlashLightWidget>
+				<RestoreFlashLightIcon>true</RestoreFlashLightIcon>
+				<Scale>.50</Scale>	
+				<X>-1318</X>
+				<Y>52</Y>
+		</FlashLightWidget>
+		
+		<HpMeter>
+		
+		<!--Shows/hides the HP bar background. Looks strange with ImprovedHealthBar, not a bug.-->
+			<ShowBG>true</ShowBG>
+
+		<!-- Options for the HP Label to the Left of the HP Meter. -->
+			<HPLabel>
+			<!-- Setting to False Removes the Hp Label -->
+				<Show>false</Show>
+			<!--Replaces the "HP" text-->
+				<CustomText>
+					<Enable>false</Enable>
+					<Text>Health Bar</Text>
+				</CustomText>
+			<!-- Use X +365 to Set it to the Right Side -->
+				<Scale>1</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</HPLabel>
+		
+		<!-- Options for the HP % to the Right of the HP Meter. -->	
+			<HPpercent>
+			<!-- Setting to False Removes the Hp % -->
+				<Show>false</Show>
+			
+			<!-- Setting to True Only Shows the HP % and Label -->
+				<OnlyShow>false</OnlyShow>
+			
+			<!-- Setting to True Provides Better Rounding -->
+				<Decimal>false</Decimal>
+		
+			<!-- Use X -385 to Set it to the Right Side -->
+				<Scale>1</Scale>
+				<X>0</X>
+				<Y>0</Y>
+			</HPpercent>
+			
+		</HpMeter>
+		
+		<Hunger_ThirstTweaks>
+			<!--
+				Show a percentage value above the thirst and hunger bars
+				For more Percent Widgets try Hud Widgets: https://www.nexusmods.com/fallout76/mods/3124
+			-->
+				<ThirstHungerPercentShow>false</ThirstHungerPercentShow>
+				
+			<!--Prevents thirst and hunger from auto-hiding after a few seconds-->
+				<AlwaysShowThirstHunger>false</AlwaysShowThirstHunger>
+				
+		</Hunger_ThirstTweaks>
+		
+	</OtherImprovements>
+	
+	<OtherMods>
+		
+		<!--
+			Scale and movment options for the orginal improved healthbar mod [https://www.nexusmods.com/fallout76/mods/368]
+			Should work with Unoffical Forks
+			Only edits the HP% Counter not the lines on the HP.
+		-->
+		<ImprovedHealthBar>
+			<EnableEditing>false</EnableEditing>
+			<!--
+				Hide: Hides the Improved % and 
+				only shows the Segmented HP bar.
+			-->	
+				<Hide>true</Hide>
+				<Scale>1</Scale>
+				<X>325</X>
+				<Y>0</Y>
+		</ImprovedHealthBar>
+		
+	</OtherMods>
+	
+	<!--
+		ImmersiveTweaks
+		
+		Concept and Code Scrapping By Commanderbass:
+		https://next.nexusmods.com/profile/Commanderbass?gameId=2590
+		
+		Active Effects, Emote Bubble, Stealth Meter, Perkpopup, Code Sanity Checking, and So Much More By Ms.Zelia:
+		https://next.nexusmods.com/profile/MsZelia?gameId=2590
+	
+		Explaination for the Standard Options Provided:
+		
+		Hide: 
+			True: Hide the Listed Hud Element. Same as Setting Scale to 0 but Allows You to Keep Scale Settings
+			False: Display as defined by other parms.
+			
+		VaTs:
+			True: Hide the Element Unless User is Using Vats.
+			False: Display as defined by other parms.
+			
+		Crouch: 
+			True: Hide the Element Unless User is Crouched.
+			False: Display as defined by other parms.
+			
+		Fade:
+			True: Hide the Element when ABOVE the percent defined by FadePer.
+				  IE if HP FadePer = 20 Your Hp Will Only Appear When You Drop to 19.9% Hp.
+			False: Display as defined by other parms.
+		
+			
+		Known Bugs:
+		
+		1} Sometimes When Looking at a Container the HUD will Appear for a Frame.
+		
+		2} Some Elements Will Flicker for a Single Frame When First Set to Hidden.
+			Fixed Where I Could.
+			
+		3} Some Options Take a Second to Update Their Settings.
+		
+		For Elements Not Covered Such as "Level Up Animation" Try Fanfare Free by Mapex:
+		Nexus Link: https://www.nexusmods.com/fallout76/mods/1293
+	-->
+	
+	<ImmersiveTweaks>
+		<Debug>
+			<Display>false</Display>
+			<Element>PartyResolutionContainer_mc.HUDPartyListBase_mc.PartyList.List_mc.EntryHolder_mc</Element>
+		</Debug>
+
+		<ActiveEffects>
+			<Hide>false</Hide>
+			<Crouch>false</Crouch>
+		<!--
+			Only Display Negative Effects IE Overweight, Withdraw, Ect.
+			Wont Hide Overkill Stacks.
+			Updates When You Gain a New Effect.
+		-->
+			<OnlyNegativeEffects>false</OnlyNegativeEffects>
+		</ActiveEffects>
+		
+		<Ap>
+			<Hide>false</Hide>
+			<Crouch>false</Crouch>
+			<VaTs>false</VaTs>
+			<Fade>false</Fade>
+				<FadePer>25</FadePer>
+		</Ap>
+		
+		<AreaVoiceList>
+			<Hide>false</Hide>
+			<Crouch>false</Crouch>
+		</AreaVoiceList>
+		
+		<Compass>
+			<Hide>false</Hide>
+		<!--Weird Base Game Bug: Sometimes When Crouched You Will Lose Compass Markers for NPCs.-->
+			<Crouch>false</Crouch>
+		</Compass>
+		
+		<Emote>
+		<!--Hides the Emote Widget on the Side of the Screen-->
+			<HideEmoteWidget>true</HideEmoteWidget>
+		<!--Disables All Above Head Pop-Ups. Includes: Emotes, Trade Pop-Ups, Revive Requests, Fear Emotes.-->
+			<HidePlayerEmoteBubble>false</HidePlayerEmoteBubble>
+		</Emote>
+		
+		<FeralMeter>
+		<!--Hides the Bar, Leaving the Skull Status Icon-->	
+			<SkullOnly>false</SkullOnly>
+			<Hide>false</Hide>
+			<Crouch>false</Crouch>
+			<VaTs>false</VaTs>
+			<Fade>false</Fade>
+				<FadePer>75</FadePer>
+		</FeralMeter>
+		
+		<FusionCoreMeter>
+		<!--Hides the Bar, Leaving the Fusion Core Count + Icon-->	
+			<FusionCountOnly>false</FusionCountOnly>
+			<Hide>false</Hide>
+			<Crouch>false</Crouch>
+			<VaTs>false</VaTs>
+			<Fade>false</Fade>
+				<FadePer>10</FadePer>
+		</FusionCoreMeter>
+		
+		<!--
+			Pop-up When Your Current Fusion Core Is Low or Empty,
+			And You Have No Spares
+		-->
+		<FusionCoreWarning>
+			<Hide>false</Hide>
+		<!--
+			Allows You to Edit The Text Shown When in the 2 States. 
+			Updates on State Change
+		-->		
+			<CustomText>
+				<Enable>false</Enable>
+				<LowBtry>Shit, Cores Getting Low</LowBtry>
+				<NoBtry>Fuck, Out of Juice</NoBtry>
+			</CustomText>
+		</FusionCoreWarning>
+		
+		<GlowMeter>
+		<!--
+		Separate the Glow Meter From the HP Bar
+		By Default it Uses the HP Bar Settings
+		For Hide/Crouch/Ect.
+		-->	
+			<Separate>false</Separate>
+				<Hide>false</Hide>
+				<Crouch>false</Crouch>
+				<VaTs>false</VaTs>
+				<Fade>false</Fade>
+					<FadePer>75</FadePer>	
+		</GlowMeter>
+		
+		<HungerThirst>
+			<Hide>false</Hide>
+			<Crouch>false</Crouch>
+		</HungerThirst>
+		
+		<!-- HP Options Will Effect Glow Meter
+			Unless Glow Separation is Turned on -->
+		<Hp>
+			<Hide>false</Hide>
+			<Crouch>false</Crouch>
+			<VaTs>false</VaTs>
+			<Fade>false</Fade>
+				<FadePer>10</FadePer>
+		</Hp>
+
+		<Indicators>
+		
+		<!--Hides the Arrow Pointing at Nearby Explosion Sources-->
+			<HideExplosiveIndicators>false</HideExplosiveIndicators>
+			
+		<!--Hides the Arrow Indicating Damage Taken and its Direction-->
+			<HideDirectionalHitIndicator>false</HideDirectionalHitIndicator>
+			
+		<!--Scale Options for the Floating Dmg Numbers. -->
+			<FloatingDmgNumbScale>1</FloatingDmgNumbScale>
+			
+		</Indicators>
+		
+		<InteractPrompts>
+		
+		<!--Quickloot (which annoyingly) applies to some containers rollover-->
+			<QuickLoot>
+				<Hide>false</Hide>
+				<Crouch>false</Crouch>
+			</QuickLoot>
+			
+		<!--Frobber is interact prompts like unlicking locked doors and touching NPCs-->
+			<Frobber>
+				<Hide>false</Hide>
+				<Crouch>false</Crouch>
+			</Frobber>
+			
+		<!--RollOver is essentially the same as Frobber (interact prompts)-->
+			<RollOver>
+				<Hide>false</Hide>
+				<Crouch>false</Crouch>
+			</RollOver>
+			
+		</InteractPrompts>
+		
+		<PerkPopUp>
+			<Hide>false</Hide>
+		</PerkPopUp>
+		
+		<RadDamageIndicator>
+			<Hide>false</Hide>
+				<OnlyHideSymbol>false</OnlyHideSymbol>
+				<OnlyHideText>true</OnlyHideText>
+			<!-- Replaces Rad Count with Custom Text -->	
+			<CustomText>
+				<Enable>false</Enable>
+			<!-- Human Class Custom Text, Dynamic Detects your Class-->	
+				<Human>
+					<Text>Air is Getting Heavy</Text>
+				</Human>
+			<!-- Ghoul Class Custom Text, Dynamic Detects your Class-->	
+				<Ghoul>
+					<Text>Breathe it In</Text>
+				</Ghoul>
+			</CustomText>
+		</RadDamageIndicator>
+		
+		<StealthMeter>
+			<Hide>false</Hide>
+		<!--Only Display the Stealth Meter When in Caution or Danger. Can Run With ThiefSense.-->
+			<SpiderSense>false</SpiderSense>
+		<!--Only Display the Stealth Meter When Detected. Can Run with SpiderSense.-->
+			<ThiefSense>false</ThiefSense>
+		<!--Allows You to Edit The Text Shown When in the 4 States. Updates on State Change-->	
+			<CustomText>
+				<Enable>false</Enable>
+				<HiddenText>QUIET AS THE GRAVE</HiddenText>
+				<DetectedText>FRIENDLY?</DetectedText>
+				<CautionText>SHIT....</CautionText>
+				<DangerText>SHIT! FUCK!</DangerText>
+			</CustomText>
+		<!--Disables the [] on the Stealth Meter.-->
+			<DisableBrackets>false</DisableBrackets>
+		</StealthMeter>
+		
+		<TeamPanel>
+			<Hide>false</Hide>
+			<Crouch>false</Crouch>
+		<!--Hides the Team Panel if You Are the Only Player on Team.-->
+			<HideEmptyTeam>false</HideEmptyTeam>
+		<!-- 
+			Enables Teamate Glow Level Tracking,
+			Which is Broken Due to a Bug.
+			Enabling will Darken the HP Bar.
+		-->
+			<Glow>
+				<Enable>false</Enable>
+			</Glow>
+
+		<!-- 
+			Removes Usernames from the Team Panel
+			
+			Will Hide:
+			Username[s]
+			Chat Mic Indicator
+			Mini Team Emote Indicator
+			Shared Perk Card Indicator
+			Daily Ops - Expo Indicator Text
+			
+			DOSNT HIDE USER JOIN/LEAVE TEAM POPUP ONSCREEN
+			use Improved Social From Ms.Zelia for that:
+			https://www.nexusmods.com/fallout76/mods/2915
+		-->
+			<TeamObliterate>
+				<Enable>false</Enable>
+			</TeamObliterate>
+		<!-- 
+			Removes Usernames from the Team Panel
+			Replaces them with a Text Box
+			
+			Will Hide:
+			Username[s]
+			Chat Mic Indicator
+			Mini Team Emote Indicator
+			Shared Perk Card Indicator
+			Daily Ops - Expo Indicator Text
+			
+			DOSNT HIDE USER JOIN/LEAVE TEAM POPUP ONSCREEN
+			use Improved Social From Ms.Zelia for that:
+			https://www.nexusmods.com/fallout76/mods/2915
+			
+			Glitchy from time to time.
+			
+		-->
+			<TeamObfuscate>
+				<Enable>true</Enable>
+				<Member1>Don't Forget to</Member1>
+				<Member2>Vote and Endorse</Member2>
+				<Member3>If You Enjoy</Member3>
+				<Member4>This Collection</Member4>
+				<X>0</X>
+				<Y>0.5</Y>
+			</TeamObfuscate>
+			
+		</TeamPanel>
+		
+		<Xp>
+			<Hide>false</Hide>
+		</Xp>
+		
+	</ImmersiveTweaks>
+
+	<!--
+		Re-Color Notes: 
+		
+		+ DO NOT use very dark or very bright colors! Try to pick something pastel or less in saturation.
+		
+		+ Absolute ranges are from -100 to 100, but 00 to 50 is the highly recommended min-max.
+		
+		+ The Code use Some Intresting Math to Convert from Hex to RGB to Map Color
+		  You Will Have to Play with it
+		
+		+ The Code Tints the Element with the Color you Choose,
+		  so Try to Think of it as Mixing Paints instead of Setting a Color
+		  
+		
+		Short Explaination for the Options:
+		
+		Enable: True/False : Enable's or Disables Recoloring of That Element
+							 Must Hop Servers or Relog to Apply State Change 
+		
+		Hex: Color you want in hex form (FFFFCB is the default HUD color)
+			 Color Picker Link [Use Web Color Option]: https://tydac.ch/color/
+			 
+			 FFFFCB unsets MOST Hex options
+			 000000 Sets MOST Options to Tar Black
+		
+		Brightness: Increase or Decrease the White Balance 
+		
+		Contrast: Changes the Bright Balance Between the Lighter and Darker Pixels
+		
+		Saturation: Color Intensity
+		
+		Shout Out to Ms.Zelia for De-obfuscating All the Odd Callnames:
+		https://next.nexusmods.com/profile/MsZelia?gameId=2590
+	
+	-->
+	
+	<Colors>
+
+	<!--Bar Showing Your Crit Charge in Vats-->
+			<CritMeter>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</CritMeter>	
+		
+	<!-- Direction and Map Marker Indicator -->
+			<Compass>
+		<!--
+			Set this to true if you use TZMapMarkers.
+			Disables the coloring of compass markers.
+		-->
+			<TZMapMarkers>false</TZMapMarkers>
+			
+			<Enable>false</Enable>
+			<Hex>FFFFCB</Hex>
+			<Brightness>0</Brightness>
+			<Contrast>0</Contrast>
+			<Saturation>0</Saturation>
+			</Compass>
+		
+	<!--Pop Up Showing Your Dmg When you Hit Something-->	
+		<DmgNumb>
+			<Enable>false</Enable>
+			<Hex>FFFFCB</Hex>
+			<Brightness>0</Brightness>
+			<Contrast>0</Contrast>
+			<Saturation>0</Saturation>
+		</DmgNumb>	
+		
+	<!--Hp Bar For Targeted Enemy-->
+		<EnemyHealthMeter>
+			<Enable>false</Enable>
+			<Hex>FFFFCB</Hex>
+			<Brightness>0</Brightness>
+			<Contrast>0</Contrast>
+			<Saturation>0</Saturation>
+		</EnemyHealthMeter>
+		
+	<!--Floating handles things like floating quest markers, Team Indicators, etc-->
+		<Floating>
+			<Enable>false</Enable>
+			<Hex>FFFFCB</Hex>
+			<Brightness>0</Brightness>
+			<Contrast>0</Contrast>
+			<Saturation>0</Saturation>
+		</Floating>
+	
+	<!--Pop Up Showing if You Hit Something-->
+		<HitMarker>
+			<Enable>false</Enable>
+			<Hex>881111</Hex>
+			<Brightness>-10</Brightness>
+			<Contrast>10</Contrast>
+			<Saturation>10</Saturation>
+		</HitMarker>
+		
+	<!--Top Right List of Active Quests Tagged in Pipboy Questlog-->
+		<QuestTracker>
+			<Enable>false</Enable>
+			<Hex>FFFFCB</Hex>
+			<Brightness>0</Brightness>
+			<Contrast>0</Contrast>
+			<Saturation>0</Saturation>
+		</QuestTracker>
+		
+	<!--
+		Sneaking Meter (Hidden, Danger, etc)
+		Direct Colors vs Tints.
+	-->
+		<StealthMeter>
+			<Enable>false</Enable>
+			<Hidden>FFFFCB</Hidden>
+			<Detected>FFFFCB</Detected>
+			<Caution>FFC300</Caution>
+			<Danger>FF0004</Danger>
+		</StealthMeter>
+		
+		
+	<!--Team panel on HUD-->
+		<Team>
+		
+	<!-- 
+		Your Team Members Glow Shown on Their Hp
+		Unused Atm Due to a Bug
+	-->
+			<Glow>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</Glow>
+			
+	<!-- Teamate Hp and Other Things-->
+			<Hp>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</Hp>
+			
+	<!-- Teamate Level Card -->
+			<Level>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</Level>
+			
+	<!-- The Small Card Showing that a Team Member is Sharing a Perk-->		
+			<PerkCard>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>-20</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</PerkCard>
+			
+	<!-- Your Team Members Rads Shown on Their Hp-->
+			<RadsBar>
+				<Enable>false</Enable>
+				<Hex>81cd38</Hex>
+				<Brightness>20</Brightness>
+				<Contrast>20</Contrast>
+				<Saturation>20</Saturation>
+			</RadsBar>
+		
+	<!-- 
+		the x[PlayerCount]
+		Direct Colors vs Tints.
+	-->
+			<TeamBonus>
+				<Enable>false</Enable>
+				<Hex>447cc3</Hex>
+			</TeamBonus>	
+		
+	<!-- 
+		Teamate Type
+		Casual, Raid, Event, Ect.
+		Direct Colors vs Tints.
+	-->
+			<TeamName>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+			</TeamName>	
+		
+	<!-- Teamate Usernames -->
+			<UserName>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</UserName>		
+			
+		</Team>
+		
+		<InteractPrompts>
+			
+		<!--Quickloot, annoyingly, applies to some containers rollover-->
+			<QuickLoot>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</QuickLoot>
+			
+		<!--Frobber are interact prompts like unlicking locked doors and interacting with NPCs-->
+			<Frobber>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</Frobber>
+			
+		<!--RollOver is essentially the same as Frobber (interact prompts)-->
+			<RollOver>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</RollOver>
+			
+		</InteractPrompts>
+		
+		<HUD_Notifications>
+		
+		<!-- quest/event complete/rewards list -->
+			<Announce>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</Announce>
+		
+		<!--Area/Team Voice Chat Indicator that List Players Talking Around You-->		
+			<AreaVoiceList>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</AreaVoiceList>
+		
+		<!--
+			Pop-up When Your Current Fusion Core Is Low or Empty,
+			And You Have No Spares
+			Direct Colors vs Tints.
+		-->
+			<FusionCoreWarning>
+			<!-- When your last Fusion Core is Below 20% -->
+				<Low_Charge>
+					<Enable>false</Enable>
+					<Hex>FF5E00</Hex>
+				</Low_Charge>
+			<!-- When your out of Fusion Cores -->
+				<No_Charge>
+					<Enable>false</Enable>
+					<Hex>FF0004</Hex>
+				</No_Charge>
+			</FusionCoreWarning>
+		
+		<!--Notifications are Pop-Ups Like Sneak damage, New Radio Signels, ect-->
+			<Notification>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</Notification>
+		
+		<!-- Pop-Up When Taking Rad Dmg-->
+			<RadDamageIndicator>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>-10</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</RadDamageIndicator>
+		
+		<!-- Description of Onscreen Voicelines -->
+			<Subtitles>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</Subtitles>
+		
+		<!-- Pop-Up Showing XP Gained from Action -->
+			<XPBar>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</XPBar>
+			
+		</HUD_Notifications>
+		
+		<LeftMeters>
+		
+		<!-- 
+			Bar Shown in PA When PA HUD is Set to False
+			Tracks Fusion Core % and Amount.
+			Auto Detects if in Proper Hud / Class.
+		-->	
+			<FusionCoreMeter>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</FusionCoreMeter>
+		
+		<!-- Bar Showing Your Current Health -->
+			<HpMeter>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</HpMeter>
+		
+		<!--
+			Bar for Ghouls that Shows Current Glow Level
+			Only Applies if Your Ghoul Class, Auto Detects
+		-->
+			<GlowMeter>
+				<Enable>false</Enable>
+				<Hex>81cd38</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</GlowMeter>
+		
+		<!--
+			Bar Showing Your Current Rad Total 
+			Only Applies if Your Human Class, Auto Detects
+		-->	
+			<RadBar>
+				<Enable>false</Enable>
+				<Hex>87006C</Hex>
+				<Brightness>-10</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</RadBar>
+			
+		</LeftMeters>
+		
+		<RightMeters>
+		
+		<!--
+			Displayed Effects on the Bottom Right.
+			Overweight, Addiction, Mutations, Buffs, Ect.
+		-->
+			<ActiveEffects>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</ActiveEffects>
+		
+
+		<!-- Shows Current Amount of Ammo in Selected Gun -->	
+			<AmmoCount>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</AmmoCount>
+		
+		<!-- Bar Showing Current Ap Total -->
+			<APMeter>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</APMeter>
+		
+		<!-- Grenade / Throwable Counter -->
+			<ExplosiveAmmoCount>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</ExplosiveAmmoCount>
+		
+		<!--
+			Bar for Ghouls that Shows Current Feral Level
+			Only Applies if Your Ghoul Class, Auto Detects
+		-->
+			<FeralMeter>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</FeralMeter>
+		
+		<!--
+			Bar Showing Current Hunger Level
+			For Human Class Only, Auto Detects.
+		-->
+			<HungerMeter>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</HungerMeter>
+		
+		<!--
+			Bar Showing Current Thirst Level
+			For Human Class Only, Auto Detects.
+		-->	
+			<ThirstMeter>
+				<Enable>false</Enable>
+				<Hex>FFFFCB</Hex>
+				<Brightness>0</Brightness>
+				<Contrast>0</Contrast>
+				<Saturation>0</Saturation>
+			</ThirstMeter>
+			
+		</RightMeters>
+		
+	</Colors>
+	
+</HUDEditor></textarea>
+      </div>
+    </details>
+
+    <!-- 2811 -->
+    <details>
+      <summary>
+        <div class="title">
+          <strong>Server Player List</strong>
+          <a href="https://www.nexusmods.com/fallout76/mods/2811" target="_blank" rel="noreferrer">nexusmods.com/fallout76/mods/2811</a>
+        </div>
+        <div class="actions">
+          <button class="primary" data-copy-target="cfg-2811">Copy config</button>
+          <button class="secondary" data-open="#cfg-2811">Jump</button>
+        </div>
+      </summary>
+      <div class="content">
+        <div class="desc">Paste your config text below.</div>
+        <textarea id="cfg-2811" class="cfg" readonly spellcheck="false">{
+	// WIDGET SETTINGS
+	"x": 46,
+	"y": 300,
+	"anchor": "top", /* top, bottom (Update 1.0.8) */
+	"ySpacing": -9,
+	"width": 180,
+	"textSize": 17,
+	/* Some of the working fonts:
+	"$76HandwrittenNeat_Font", "$76HandwrittenIlliterate", "$Adventure_Font", "$BerlinDemi", "$BRODY",
+	"$Brush_Script_Std", "$ChowderHead", "$ConsoleFont", "$DebugTextFont", "$DotMatrix_Font", "$evaScript_Font",
+	"$Futura_Bold", "$Futura_Bold_Oblique", "$Futura_Medium_Oblique", "$HandwrittenFont", "$KiddieCocktails",
+	"$Leiascript_Font", "$MAIN_Font", "$MAIN_Font_Bold", "$MAIN_Font_Light", "$NixieTube_Font",
+	"$Portico_Font_Regular", "$Slate_Mobile", "$Terminal_Font", "$Typewriter_Font" */
+	"textFont": "$MAIN_Font_Bold",
+	"textAlign": "left", /* left, center, right */
+	"textColor": "0xffffca",
+	"textShadow": false, /* (Update 1.0.8) */
+	"background": true,
+	"backgroundColor": "0x000000",
+	/* alpha / backgroundAlpha:
+		0 = loads default value
+		0.0001 = transparent
+		0.0 < value < 1.0 = semi-transparent
+		1.0 = opaque */
+	/* HUD Opacity in settings can be changed so value of "alpha" can go over 1.0 (does not apply to "backgroundAlpha") */
+	"alpha": 1.0,
+	"backgroundAlpha": 0.35,
+	/* Blend modes:
+	add, alpha, darken, difference, erase, hardlight, invert, layer,
+	lighten, multiply, normal, overlay, screen, shader, subtract
+	https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/BlendMode.html */
+	"blendMode": "normal",
+	"textBlendMode": "normal",
+	
+	"disableRealTimeEdit": false, /* (Update 1.0.8) */
+	
+	
+	
+	// OVERLAY MOD LOADER ONLY SETTINGS - Improved Social Menu 1.0.4+
+	"debugKeys": false,
+	"toggleVisibilityHotkey": 0,
+	"forceHideHotkey": "N-", // Update 1.1.7
+	"toggleVendorsHotkey": "N*", // Update 1.2.3
+	
+	
+	
+	// PLAYER DISPLAY SETTINGS
+	"refresh": 1500,
+	
+	/* Format accepts:
+	{name}, {level}, {type} and "formats" strings:
+	{bounty}, {isFriend}, {isTextChatUser}, {isHidden}, {PlayerLocal},
+	{PlayerRemote}, {MostWanted} {TeamLeader}, {TeamMember}
+	Update 1.1.7: {distance}, {direction}, {angle}, {angleCompass}
+	
+	{bounty} accepts {caps} string
+	
+	Examples from images:
+	format: "{level}     \t{name} {bounty}", bounty: "({caps}c)"
+	format: "{name} {bounty}[{level}]", bounty: "({caps}c) "
+	
+	Another example with extended formats:
+	"format": "{MostWanted}{isHidden}{isFriend}{isTextChatUser} {name} {bounty}[{level}]",
+	"formats": {"MostWanted": "WANTED:", "bounty": "({caps}c)", "isHidden": "-.-",
+		"isFriend": "{F}", "isTextChatUser": "{+}" } */
+	
+	"format": "{name} {vendorData}",
+	"formats": {
+		"bounty": "({caps}c)",
+		"isHidden": "-.-",
+		"isFriend": "{F}",
+		"isTextChatUser": "{TC}",
+		"PlayerLocal": "[{characterName}]" // Update 1.1.6
+	},
+	
+	"vendorData": { // Update 1.1.5
+		"enabled": true,
+		"usePlayerColor": true,
+		"hideVisitedCamps": false, // Update 1.1.6
+		"hidePlayersWithoutVendorData": ["PlayerRemote"], // Update 1.1.7, e.g. ["PlayerRemote", "isHidden"]
+		
+		/* Example format with distance, direction and angle:
+		"\t{distance} {direction}({angleCompass}°) |  {APPAREL}{EXPLOSIVE}{WEAPON2}{WEAPON3}{ARMOR2}{ARMOR3}{MODS}"
+		
+		Example format with all data:
+		"\tWeapon: {WEAPON0}{EXPLOSIVE}{WEAPON1}{WEAPON2}{WEAPON3}",
+		"\t{APPAREL}{ARMOR0}{ARMOR1}{ARMOR2}{ARMOR3}",
+		"\t{FOOD}{DRINK}{STIMPAK}{MEDS}{MISC}{JUNK}{PLAN}{AMMO}{MODS}"
+		 
+		 
+		 Update 1.2.1:
+		 Example format with in-line vendor data, needs {vendorData} in player "format" above
+		 "| {PLAN}{MODS} {WEAPON1}{WEAPON2}{WEAPON3} {ARMOR1}{ARMOR2}{ARMOR3}"
+		 */
+		"format": [
+			"{PLAN} {MODS}"
+		],
+		"formats": {
+			"{APPAREL}": "A{value}",
+			"{ARMOR0}": "A{value}",
+			"{ARMOR1}": "A¬{value}",
+			"{ARMOR2}": "A¬¬{value}",
+			"{ARMOR3}": "A¬¬¬{value}",
+			"{WEAPON0}": "{value}",
+			"{WEAPON1}": "¬{value}",
+			"{WEAPON2}": "¬¬{value}",
+			"{WEAPON3}": "¬¬¬{value}",
+			"{MODS}": "M{value}",
+			"{STIMPAK}": "S{value}",
+			"{MEDS}": "Md{value}",
+			"{FOOD}": "F{value}",
+			"{DRINK}": "D{value}",
+			"{AMMO}": "Am{value}",
+			"{EXPLOSIVE}": "E{value}",
+			"{JUNK}": "J{value}",
+			"{PLAN}": "P{value}",
+			"{MISC}": "X{value}"
+		}
+	},
+	
+	"sortBy": "default",
+	/* sortBy options: default, custom, property
+	default: doesn't use sortOrder, lists latest players on bottom
+	custom: list player names or types which will be shown on top (in order)
+		example: ["MostWanted", "PlayerLocal" "PlayerRemote", "TeamLeader",
+			"TeamMember", "isHidden", "isTextChatUser", "isFriend"]
+	property: list property name(s) to sort by (name, level, type, bounty)
+		example: ["level, "name"] */
+	"sortOrder": [
+		"bounty",
+		"level",
+		"name"
+	],
+	"reverseSort": false, /* ascending <=> descending */
+	
+	/* Display data options:
+	"showVersion", "showHUDMode", "showElapsedTime", "showLastConfigUpdate", "showPlayerCount"
+	"showRenderTime" (Update 1.0.8)
+	"emptyspace:height"
+		examples: "emptyspace:5", "emptyspace:-5"
+	"separator:height:color" - color can also be specified as any customColors value
+		examples: "separator:1:0xffffff", "separator:3:isFriend"
+	"text:color:textToDisplay" - color can also be specified as any customColors value
+		examples: "text:0xffffff:My custom text", "text:MostWanted:Bounty list"
+	"group:groupName"
+		examples: "group:MostWanted", "group:isFriend"
+	Data will show in order in which it is listed here: */
+	"displayData": [
+		//"showVersion",
+		//"showHUDMode",
+		//"showRenderTime",
+		//"showElapsedTime",
+		//"showLastConfigUpdate",
+		//"showPlayerCount",
+		//"separator:1:0xffffff",
+		//"group:PlayerLocal",
+		// BOUNTIES
+		//"text:MostWanted:Bounties",
+		//"separator:1:MostWanted",
+		//"group:MostWanted",
+		//"separator:1:MostWanted",
+		// FRIENDS
+		//"text:isFriend:{F} Friends/:",
+		"group:isFriend",
+		//"separator:1:isFriend",
+		// TEXT CHAT USERS
+		//"text:isTextChatUser:{+} Text chat users",
+"group:isTextChatUser",
+		//"separator:1:isTextChatUser",
+		// TEAM MEMBERS
+		//"text:TeamMember:Team",
+		//"group:TeamLeader",
+		//"group:TeamMember",
+		//"separator:1:TeamMember",
+		// OTHER PLAYERS NOT IN GROUP
+		"group:All"
+		// MORE DATA CAN GO HERE BELOW PLAYER LIST (don't forget commas)
+	],
+	
+	/* Custom color options:
+	"showVersion", "showHUDMode", "showElapsedTime", "showLastConfigUpdate", "showPlayerCount", "isServerFull",
+	"isFriend", "isTextChatUser", "isHidden", "PlayerLocal", "PlayerRemote", "MostWanted", "TeamLeader", "TeamMember"
+	Priority for player colors: Wanted > Friend > TextChat user > Type (local, remote, leader, member)
+	
+	Update 1.1.5: "vendorData"
+	Update 1.1.6: "visitedCamp"
+	*/
+	"customColors":	{
+		"showVersion": "0xffffca",
+		"showHUDMode": "0xffffca",
+		"showElapsedTime": "0xffffca",
+		"showLastConfigUpdate": "0xffffca",
+		"showPlayerCount": "0xffffca",
+		"isServerFull": "0xffffca",
+		"isFriend": "0x4175b9",
+		"isTextChatUser": "0xF5CB5B",
+		"isHidden": "0xffffca",		// Player in expedition or stealth (while in public team)
+		"MostWanted": "0xffffca",	// Wanted players
+		"PlayerLocal": "0xffffca",	// Your name color
+		"TeamLeader": "0xffffca",
+		"TeamMember": "0xffffca",
+		"vendorData": "0xffffca",
+		"visitedCamp": "0xffffca"
+	},
+	
+	"hideTypes": [
+	/* Options: "TeamLeader", "TeamMember", "MostWanted", "PlayerLocal" (you), "PlayerRemote" (other players), "isHidden" */
+	],
+	"hidePlayers": [
+		"player name 1",
+		"player name 2"
+	],
+	
+	/* HUD Modes:
+	"ActivateTypeMode", "All", "AutoVanity", "CampPlacement", "ContainerMode", "CrosshairAndActivateOnly",
+	"DeathRespawnMode", "DialogueMode", "EndOfMatch", "FurnitureEnterExit", "InsideMemory", "InspectMode",
+	"IronSights", "LegendaryPerksMode", "LockpickingMode", "MapMenu", 	"MessageMode", "MovementDisabled",
+	"NoHud", "PauseMode", "PerksMode", "Pipboy", "PowerArmor", 	"RadialMenu", "SelfieMode", "SitWaitMode",
+	"SpectatorMode", "TerminalMode", "VATS", "VATSPlayback", "VertibirdMode", "WorkshopMode"
+	"Fishing"
+	"WorkshopNoCrosshairMode"
+	"DefaultScopeMenu", "CameraScopeMenu"
+	"Loading", "MainMenu"
+	
+	"All" is default HUD mode (non-power armor), not all of them */
+	"HUDModesState": "shown", /* Options: hidden, shown */
+	"HUDModes": [
+		"MapMenu"
+	]
+}</textarea>
+      </div>
+    </details>
+
+    <!-- 3114 -->
+    <details>
+      <summary>
+        <div class="title">
+          <strong>HUD Condition</strong>
+          <a href="https://www.nexusmods.com/fallout76/mods/3114" target="_blank" rel="noreferrer">nexusmods.com/fallout76/mods/3114</a>
+        </div>
+        <div class="actions">
+          <button class="primary" data-copy-target="cfg-3114">Copy config</button>
+          <button class="secondary" data-open="#cfg-3114">Jump</button>
+        </div>
+      </summary>
+      <div class="content">
+        <div class="desc">Paste your config text below.</div>
+        <textarea id="cfg-3114" class="cfg" readonly spellcheck="false">{
+	// WIDGET SETTINGS
+	"x": 50,
+	"y": 925,
+	"textSize": 18,
+	"width": 250,
+	/* Some of the working fonts:
+	"$76HandwrittenNeat_Font", "$76HandwrittenIlliterate", "$BerlinDemi", "$BRODY",
+	"$Brush_Script_Std", "$ChowderHead", "$ConsoleFont", "$DebugTextFont", "$DotMatrix_Font",
+	"$evaScript_Font", "$Futura_Bold", "$HandwrittenFont", "$KiddieCocktails", "$Leiascript_Font",
+	"$MAIN_Font", "$MAIN_Font_Bold", "$MAIN_Font_Light", "$NixieTube_Font", "$Portico_Font_Regular",
+	"$Slate_Mobile", "$Terminal_Font", "$Typewriter_Font" */
+	"textFont": "$MAIN_Font",
+	"textAlign": "left", /* left, center, right */
+	"textColor": "0xffffff",
+	"textShadow": true,
+	"alpha": 1.0,
+	"blendMode": "normal",
+	"textBlendMode": "normal",
+	
+	"disableRealTimeEdit": false,
+	"instantConfigReload": true, // 1 second refresh
+	
+	
+	// CONDITIONS DISPLAY SETTINGS
+	"refresh": 100,
+	
+	"textsScale": {"x": 0, "y": 0},
+	"imagesScale": {"x": 1.0, "y": 1.0},
+	
+	"percentDecimals": 0,
+	
+	"useTextColorGradients": true,
+	"textColorGradients": [
+		{"belowPercent": 5, "color": "0xff0000"},
+		{"belowPercent": 20, "color": "0xe8460c"},
+		{"belowPercent": 35, "color": "0xffffca"},
+		{"belowPercent": 100, "color": "0xffffca"},
+		{"belowPercent": 160, "color": "0xffffca"},
+		{"belowPercent": 300, "color": "0xffffca"}
+	],
+	
+	/* You can use any custom image that follows these specifications:
+		Image is square - e.g. 128x128, 256x256, 512x512
+		Saved in dds (DirectDraw Surface) format with BC1 sRGB compression - use Paint.Net
+		Located in Textures/HUDCondition folder - e.g. Textures/HUDCondition/Underarmor/MyCustomUnderarmor.dds
+		Packed in ba2 archive - you can use Archive2, Baka file tool or any other packing tool
+		Packed ba2 archive is added to your load order - Fallout76Custom.ini / Project76Custom.ini file
+	*/
+	
+	"Weapon": {
+		"showCondition": false,
+		"offsetText": {"x": 500, "y": -30},
+		"textLength": 15
+	},
+	
+	"useDynamicPowerArmorParts": true, // Update 1.0.2
+	"useDynamicGhoulParts": true, // Update 1.0.8
+	
+	"disableBackgroundImage": false, // Update 1.0.2
+	"BackgroundImage":
+	{
+		"image": "Underarmor/VaultBoy/Yellow.dds",
+		"offset": {"x": 300, "y": 20},
+		"scale": {"x": 0.56, "y": 0.56},
+		"adjustColor": true,
+		"color": {"hue": -3, "saturation": -70, "brightness": 8, "contrast": 0},
+		"alpha": 1.0 // Update 1.0.3
+	},
+	"Ghoul_BackgroundImage": // Update 1.0.8
+	{
+		// for useDynamicGhoulParts
+		"image": "Underarmor/VaultGhoul/White.dds",
+		"offset": {"x": 13, "y": 4},
+		"scale": {"x": 0.56, "y": 0.56},
+		"adjustColor": false,
+		"color": {"hue": 0, "saturation": 0, "brightness": 0, "contrast": 0},
+		"alpha": 1.0 
+	},
+	"PowerArmor_BackgroundImage": // Update 1.0.2
+	{
+		// for useDynamicPowerArmorParts
+		"image": "PowerArmor/Outline/Black.dds",
+		"offset": {"x": 0, "y": 0},
+		"scale": {"x": 0.6, "y": 0.6},
+		"adjustColor": false,
+		"color": {"hue": 0, "saturation": 0, "brightness": 0, "contrast": 0},
+		"alpha": 1.0 // Update 1.0.3
+	},
+	
+	"disableParts": false, // Update 1.0.2
+	"Parts": {
+		"Hat": {
+			"text": ["helmet", "hat"],
+			"image": "Hat/Yellow.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "Hat/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "Hat/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "Hat/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 100, "image": "Hat/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 160, "image": "Hat/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 300, "image": "Hat/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0}
+			],
+			"offsetText": {"x": 131, "y": 6},
+			"offsetImage": {"x": 117, "y": 16},
+			"scaleImage": {"x": 1.0, "y": 1.0},
+			"showPercentage": true
+		},
+		"RightArm": {
+			"text": ["right arm", " ra "],
+			"image": "RightArm/Yellow.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "RightArm/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "RightArm/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "RightArm/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 100, "image": "RightArm/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 160, "image": "RightArm/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 300, "image": "RightArm/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0}
+			],
+			"offsetText": {"x": 302, "y": 51},
+			"offsetImage": {"x": 312, "y": 46},
+			"scaleImage": {"x": 1.0, "y": 1.0},
+			"showPercentage": true
+		},
+		"LeftArm": {
+			"text": ["left arm", " la"],
+			"image": "LeftArm/Yellow.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "LeftArm/Red.dds", "hue": 0, "saturation": 0, "brightness": 8, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "LeftArm/Red.dds", "hue": 20, "saturation": 0, "brightness": 8, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "LeftArm/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 100, "image": "LeftArm/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 160, "image": "LeftArm/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 300, "image": "LeftArm/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0}
+			],
+			"offsetText": {"x": 392, "y": 51},
+			"offsetImage": {"x": 364, "y": 49},
+			"scaleImage": {"x": 1.0, "y": 1.0},
+			"showPercentage": true
+		},
+		"RightLeg": {
+			"text": ["right leg", " rl"],
+			"image": "RightLeg/Yellow.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "RightLeg/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "RightLeg/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "RightLeg/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 100, "image": "RightLeg/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 160, "image": "RightLeg/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 300, "image": "RightLeg/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0}
+			],
+			"offsetText": {"x": 307, "y": 111},
+			"offsetImage": {"x": 326, "y": 93},
+			"scaleImage": {"x": 1.0, "y": 1.0},
+			"showPercentage": true
+		},
+		"LeftLeg": {
+			"text": ["left leg", " ll"],
+			"image": "LeftLeg/Yellow.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "LeftLeg/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "LeftLeg/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "LeftLeg/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 100, "image": "LeftLeg/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 160, "image": "LeftLeg/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 300, "image": "LeftLeg/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0}
+			],
+			"offsetText": {"x": 397, "y": 111},
+			"offsetImage": {"x": 348, "y": 96},
+			"scaleImage": {"x": 1.0, "y": 1.0},
+			"showPercentage": true
+		},
+		"Chest": {
+			"text": ["chest", "torso", " ch"],
+			"image": "Chest/Yellow.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "Chest/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "Chest/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "Chest/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 100, "image": "Chest/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 160, "image": "Chest/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0},
+				{"belowPercent": 300, "image": "Chest/Yellow.dds", "hue": 0, "saturation": -70, "brightness": 8, "contrast": -50, "alpha": 1.0}
+			],
+			"offsetText": {"x": 347, "y": 146},
+			"offsetImage": {"x": 336, "y": 60},
+			"scaleImage": {"x": 1.0, "y": 1.0},
+			"showPercentage": true
+		}
+	},
+	"Ghoul_Parts": {
+		"Hat": {
+			"text": ["helmet", "hat"],
+			"image": "Hat/White.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "Hat/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "Hat/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "Hat/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 100, "image": "Hat/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 160, "image": "Hat/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 300, "image": "Hat/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0}
+			],
+			"offsetText": {"x": 64, "y": -10},
+			"offsetImage": {"x": 50, "y": 0},
+			"scaleImage": {"x": 1.0, "y": 1.0},
+			"showPercentage": true
+		},
+		"RightArm": {
+			"text": ["right arm", " ra "],
+			"image": "RightArm/Yellow.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "RightArm/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "RightArm/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "RightArm/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 100, "image": "RightArm/White.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 160, "image": "RightArm/Green.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 300, "image": "RightArm/Teal.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0}
+			],
+			"offsetText": {"x": 15, "y": 35},
+			"offsetImage": {"x": 25, "y": 30},
+			"scaleImage": {"x": 1.0, "y": 1.0},
+			"showPercentage": true
+		},
+		"LeftArm": {
+			"text": ["left arm", " la"],
+			"image": "LeftArm/White.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "LeftArm/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "LeftArm/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "LeftArm/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 100, "image": "LeftArm/White.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 160, "image": "LeftArm/Green.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 300, "image": "LeftArm/Teal.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0}
+			],
+			"offsetText": {"x": 105, "y": 35},
+			"offsetImage": {"x": 77, "y": 33},
+			"scaleImage": {"x": 1.0, "y": 1.0},
+			"showPercentage": true
+		},
+		"RightLeg": {
+			"text": ["right leg", " rl"],
+			"image": "RightLeg/White.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "RightLeg/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "RightLeg/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "RightLeg/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 100, "image": "RightLeg/White.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 160, "image": "RightLeg/Green.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 300, "image": "RightLeg/Teal.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0}
+			],
+			"offsetText": {"x": 20, "y": 95},
+			"offsetImage": {"x": 39, "y": 77},
+			"scaleImage": {"x": 1.0, "y": 1.0},
+			"showPercentage": true
+		},
+		"LeftLeg": {
+			"text": ["left leg", " ll"],
+			"image": "LeftLeg/White.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "LeftLeg/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "LeftLeg/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "LeftLeg/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 100, "image": "LeftLeg/White.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 160, "image": "LeftLeg/Green.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 300, "image": "LeftLeg/Teal.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0}
+			],
+			"offsetText": {"x": 110, "y": 95},
+			"offsetImage": {"x": 61, "y": 80},
+			"scaleImage": {"x": 1.0, "y": 1.0},
+			"showPercentage": true
+		},
+		"Chest": {
+			"text": ["chest", "torso", " ch"],
+			"image": "Chest/White.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "Chest/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "Chest/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "Chest/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 100, "image": "Chest/White.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 160, "image": "Chest/Green.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 300, "image": "Chest/Teal.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0}
+			],
+			"offsetText": {"x": 60, "y": 130},
+			"offsetImage": {"x": 49, "y": 44},
+			"scaleImage": {"x": 1.0, "y": 1.0},
+			"showPercentage": true
+		}
+	},
+	"PowerArmor_Parts": // Update 1.0.2
+	{
+		// for useDynamicPowerArmorParts
+		"Hat": {
+			"text": ["helmet", "hat"],
+			"image": "PowerArmor/Helmet/White.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "PowerArmor/Helmet/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "PowerArmor/Helmet/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "PowerArmor/Helmet/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 100, "image": "PowerArmor/Helmet/White.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 160, "image": "PowerArmor/Helmet/Green.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 300, "image": "PowerArmor/Helmet/Teal.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0}
+			],
+			"offsetText": {"x": 60, "y": -15},
+			"offsetImage": {"x": 0, "y": 0},
+			"scaleImage": {"x": 0.6, "y": 0.6},
+			"showPercentage": true
+		},
+		"RightArm": {
+			"text": ["right arm", " ra "],
+			"image": "PowerArmor/RightArm/White.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "PowerArmor/RightArm/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "PowerArmor/RightArm/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "PowerArmor/RightArm/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 100, "image": "PowerArmor/RightArm/White.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 160, "image": "PowerArmor/RightArm/Green.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 300, "image": "PowerArmor/RightArm/Teal.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0}
+			],
+			"offsetText": {"x": 0, "y": 25},
+			"offsetImage": {"x": 0, "y": 0},
+			"scaleImage": {"x": 0.6, "y": 0.6},
+			"showPercentage": true
+		},
+		"LeftArm": {
+			"text": ["left arm", " la "],
+			"image": "PowerArmor/LeftArm/White.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "PowerArmor/LeftArm/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "PowerArmor/LeftArm/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "PowerArmor/LeftArm/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 100, "image": "PowerArmor/LeftArm/White.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 160, "image": "PowerArmor/LeftArm/Green.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 300, "image": "PowerArmor/LeftArm/Teal.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0}
+			],
+			"offsetText": {"x": 110, "y": 40},
+			"offsetImage": {"x": 0, "y": 0},
+			"scaleImage": {"x": 0.6, "y": 0.6},
+			"showPercentage": true
+		},
+		"RightLeg": {
+			"text": ["right leg", " rl "],
+			"image": "PowerArmor/RightLeg/White.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "PowerArmor/RightLeg/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "PowerArmor/RightLeg/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "PowerArmor/RightLeg/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 100, "image": "PowerArmor/RightLeg/White.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 160, "image": "PowerArmor/RightLeg/Green.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 300, "image": "PowerArmor/RightLeg/Teal.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0}
+			],
+			"offsetText": {"x": 10, "y": 95},
+			"offsetImage": {"x": 0, "y": 0},
+			"scaleImage": {"x": 0.6, "y": 0.6},
+			"showPercentage": true
+		},
+		"LeftLeg": {
+			"text": ["left leg", " ll "],
+			"image": "PowerArmor/LeftLeg/White.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "PowerArmor/LeftLeg/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "PowerArmor/LeftLeg/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "PowerArmor/LeftLeg/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 100, "image": "PowerArmor/LeftLeg/White.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 160, "image": "PowerArmor/LeftLeg/Green.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 300, "image": "PowerArmor/LeftLeg/Teal.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0}
+			],
+			"offsetText": {"x": 95, "y": 95},
+			"offsetImage": {"x": 0, "y": 0},
+			"scaleImage": {"x": 0.6, "y": 0.6},
+			"showPercentage": true
+		},
+		"Chest": {
+			"text": ["chest", "torso", " ch "],
+			"image": "PowerArmor/Torso/White.dds",
+			"gradients": [
+				{"belowPercent": 5, "image": "PowerArmor/Torso/Red.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 20, "image": "PowerArmor/Torso/Red.dds", "hue": 20, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 35, "image": "PowerArmor/Torso/Yellow.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 100, "image": "PowerArmor/Torso/White.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 160, "image": "PowerArmor/Torso/Green.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0},
+				{"belowPercent": 300, "image": "PowerArmor/Torso/Teal.dds", "hue": 0, "saturation": 0, "brightness": 0, "contrast": 0, "alpha": 1.0}
+			],
+			"offsetText": {"x": 60, "y": 135},
+			"offsetImage": {"x": 0, "y": 0},
+			"scaleImage": {"x": 0.6, "y": 0.6},
+			"showPercentage": true
+		}
+	},
+	
+	/* HUD Modes:
+	"ActivateTypeMode", "All", "AutoVanity", "CampPlacement", "ContainerMode", "CrosshairAndActivateOnly",
+	"DeathRespawnMode", "DialogueMode", "EndOfMatch", "FurnitureEnterExit", "InsideMemory", "InspectMode",
+	"IronSights", "LegendaryPerksMode", "LockpickingMode", "MapMenu", 	"MessageMode", "MovementDisabled",
+	"NoHud", "PauseMode", "PerksMode", "Pipboy", "PowerArmor", 	"RadialMenu", "SelfieMode", "SitWaitMode",
+	"SpectatorMode", "TerminalMode", "VATS", "VATSPlayback", "VertibirdMode", "WorkshopMode"
+	"Fishing"
+	"WorkshopNoCrosshairMode"
+	"DefaultScopeMenu", "CameraScopeMenu"
+	"ExamineConfirmMode"
+	
+	"All" is default HUD mode (non-power armor), not all of them */
+	"HUDModesState": "hidden", // Options: hidden, shown
+	"HUDModes": [
+		"ContainerMode",
+		"DialogueMode",
+		"ExamineConfirmMode",
+		"InspectMode",
+		"LegendaryPerksMode",
+		"MapMenu",
+		"MessageMode",
+		"PauseMode",
+		"PerksMode",
+		//"Pipboy",
+		"RadialMenu",
+		"SelfieMode",
+		"WorkshopMode"
+	]
+}</textarea>
+      </div>
+    </details>
+
+    <!-- 3144 -->
+    <details>
+      <summary>
+        <div class="title">
+          <strong>HUD Mod Loader</strong>
+          <a href="https://www.nexusmods.com/fallout76/mods/3144" target="_blank" rel="noreferrer">nexusmods.com/fallout76/mods/3144</a>
+        </div>
+        <div class="actions">
+          <button class="primary" data-copy-target="cfg-3144">Copy config</button>
+          <button class="secondary" data-open="#cfg-3144">Jump</button>
+        </div>
+      </summary>
+      <div class="content">
+        <div class="desc">Paste your config text below.</div>
+        <textarea id="cfg-3144" class="cfg" readonly spellcheck="false">BuffsMeter
+CompatibleShowHealthRedux
+CompatibleWeightIndicator
+CustomCrosshair
+CustomRadios
+DPSMeter
+EventNotifications
+FFHudMenu
+HudBarPercentWidgets
+HUDChallenges
+HUDCondition
+HUDEditor
+HUDPlayerList
+ImprovedBars
+ImprovedHealthBars
+PLMHudMenu
+StatsMeter
+VendorLog
+VATSPriority
+KillStreakTimer
+DynamicPingAudio
+</textarea>
+      </div>
+    </details>
+
+    <!-- 3297 -->
+    <details>
+      <summary>
+        <div class="title">
+          <strong>VATS Target Limb Priorities</strong>
+          <a href="https://www.nexusmods.com/fallout76/mods/3297" target="_blank" rel="noreferrer">nexusmods.com/fallout76/mods/3297</a>
+        </div>
+        <div class="actions">
+          <button class="primary" data-copy-target="cfg-3297">Copy config</button>
+          <button class="secondary" data-open="#cfg-3297">Jump</button>
+        </div>
+      </summary>
+      <div class="content">
+        <div class="desc">Paste your config text below.</div>
+        <textarea id="cfg-3297" class="cfg" readonly spellcheck="false">{
+	"debug": 0,
+	
+	"uiConfig": {
+		"x": 20,
+		"y": 20,
+		"textSize": 12,
+		"textFont": "$MAIN_Font",
+		"textAlign": "left",
+		"textColor": "0xffffff",
+		"textShadow": false,
+		"hideResistances": false,
+		"hideButtons": true
+	},
+	
+	"disabled": false,
+	"disableForTargets": [],
+	
+	"lockPriorityTarget": false,
+	"lockPriorityTargetExcluded": ["SENTRY BOT", "ULTRACITE TERROR", "STORM GOLIATH", "CARGOBOT", "ASSAULTRON", "EN06 GUARDIAN", "DEATHCLAW", "SCORCHBEAST QUEEN", "GRIMM BOT", "SHERIFF BOT"],
+	
+	"useTargetSoundIndicator": false,
+	"targetSoundIndicator": {
+		"¬": "UILegendaryCreature",
+		"LEGENDARY": "UILegendaryCreature",
+		"ANOTHER EXAMPLE TARGET": "UITargetingComputerMapTargetConfirm"
+	},
+	
+	"useTargetNames": true, // Requires HUDModLoader + HUDTools
+	
+	"defaultPriority": [
+		{"partName": "HEAD", "minHitChance": 1},
+		{"partName": "TORSO", "hasCenterMasochist": true, "minHitChance": 1},
+		{"minHitChance": 80},
+		{"minHitChance": 60},
+		{"minHitChance": 40},
+		{"minHitChance": 20},
+		{"minHitChance": 1}
+	],
+	"priorities": {
+		"SENTRY BOT": [
+			{"partName": "FUSION CORE", "minHitChance": 5},
+			{"partName": "TORSO", "hasCenterMasochist": true, "minHitChance": 1},
+			{"partName": "ARM", "minHitChance": 1}
+		],
+		"GRIMM BOT": [
+			{"partName": "FUSION CORE", "minHitChance": 5},
+			{"partName": "TORSO", "hasCenterMasochist": true, "minHitChance": 1},
+			{"partName": "ARM", "minHitChance": 1}
+		],
+		"SHERIFF BOT": [
+			{"partName": "FUSION CORE", "minHitChance": 5},
+			{"partName": "TORSO", "hasCenterMasochist": true, "minHitChance": 1},
+			{"partName": "ARM", "minHitChance": 1}
+		],
+		"SECURITY ROBOT": [
+			{"partName": "FUSION CORE", "minHitChance": 5},
+			{"partName": "TORSO", "hasCenterMasochist": true, "minHitChance": 1},
+			{"partName": "ARM", "minHitChance": 1}
+		],
+		"TURRET": [
+			{"partName": "BARREL", "minHitChance": 1},
+			{"partName": "MOTORS", "minHitChance": 1}
+		],
+		"GUTSY": [
+			{"partName": "THRUSTER", "minHitChance": 1},
+			{"partName": "EYE", "minHitChance": 1}
+		],
+		"NANNY": [
+			{"partName": "THRUSTER", "minHitChance": 1},
+			{"partName": "EYE", "minHitChance": 1}
+		],
+		"HANDY": [
+			{"partName": "THRUSTER", "minHitChance": 1},
+			{"partName": "EYE", "minHitChance": 1}
+		],
+		"ULTRACITE TERROR": [
+			{"partName": "RIGHTEYE", "minHitChance": 60},
+			{"partName": "LEFTEYE", "minHitChance": 60},
+			{"partName": "RIGHTEYE", "minHitChance": 40},
+			{"partName": "LEFTEYE", "minHitChance": 40},
+			{"partName": "RIGHTEYE", "minHitChance": 20},
+			{"partName": "LEFTEYE", "minHitChance": 20},
+			{"partName": "RIGHTEYE", "minHitChance": 10},
+			{"partName": "LEFTEYE", "minHitChance": 10}
+		],
+		"FLOATER": [
+			{"partName": "EYES", "minHitChance": 1}
+		],
+		"POLLINATOR": [
+			{"partName": "EYES", "minHitChance": 1}
+		],
+		"STORM GOLIATH": [
+			{"partName": "GLASS", "notCrippled": true, "minHitChance": 1},
+			{"partName": "BACK PANEL", "notCrippled": true, "minHitChance": 1},
+			{"partName": "LEFT", "notCrippled": true, "minHitChance": 1},
+			{"partName": "RIGHT", "notCrippled": true, "minHitChance": 1},
+			{"partName": "TORSO", "notCrippled": true, "minHitChance": 1},
+			{"partName": "TORSO", "hasCenterMasochist": true},
+			{"partName": "GLASS", "minHitChance": 1}
+		],
+		"EYEBOT": [
+			{"partName": "BACK PANEL", "minHitChance": 25},
+			{"partName": "ANTENNA", "minHitChance": 1}
+		],
+		"EYEBOMB": [
+			{"partName": "BACK PANEL", "minHitChance": 25},
+			{"partName": "ANTENNA", "minHitChance": 1}
+		],
+		"REPAIR BOT": [
+			{"partName": "BACK PANEL", "minHitChance": 25},
+			{"partName": "ANTENNA", "minHitChance": 1}
+		],
+		"CARGOBOT": [
+			{"partName": "BOOSTER", "notCrippled": true, "minHitChance": 1}
+		],
+		"ASSAULTRON": [
+			{"partName": "TORSO", "hasCenterMasochist": true, "minHitChance": 1},
+			{"partName": "RIGHT LEG", "notCrippled": true, "minHitChance": 1},
+			{"partName": "LEFT LEG", "minHitChance": 1}
+		],
+		"IMPOSTER SHEEPSQUATCH": [
+			{"partName": "TORSO", "hasCenterMasochist": true, "minHitChance": 1},
+			{"partName": "RIGHT LEG", "notCrippled": true, "minHitChance": 1},
+			{"partName": "LEFT LEG", "minHitChance": 1}
+		],
+		"VERTIBIRD": [
+			{"partName": "CABIN", "minHitChance": 1}
+		],
+		"EN06 GUARDIAN": [
+			{"partName": "ULTRAGENETIC SHIELD", "notCrippled": true, "minHitChance": 1},
+			"TORSO"
+		],
+		"GRAFTON MONSTER": [
+			{"partName": "BLOWHOLE", "minHitChance": 1},
+			{"partName": "TORSO", "hasCenterMasochist": true, "minHitChance": 1},
+			{"partName": "ARM", "minHitChance": 1}
+		],
+		"RADSCORPION": [
+			{"partName": "FACE", "minHitChance": 1}
+		],
+		"DEATHCLAW": [
+			{"partName": "BELLY", "minHitChance": 1}
+		],
+		"SCORCHBEAST QUEEN": [
+			{"partName": "WING", "notCrippled": true}
+		],
+		"MIRELURK QUEEN": [
+			{"partName": "SPOUTS", "minHitChance": 1},
+			{"partName": "LEG", "minHitChance": 1}
+		],
+		"STRANGLER QUEEN": [
+			{"partName": "SPOUTS", "minHitChance": 1},
+			{"partName": "LEG", "minHitChance": 1}
+		],
+		"ALIEN DRONE": [
+			{"partName": "BODY"}
+		],
+		"CAPTAIN ALPHA": [
+			{"partName": "BODY"}
+		],
+		"CAPTAIN OMEGA": [
+			{"partName": "BODY"}
+		],
+		"ALIEN INVADER": [
+			{"partName": "TORSO"}
+		],
+		"GENERAL ZETA": [
+			{"partName": "TORSO"}
+		]
+	}
+}</textarea>
+      </div>
+    </details>
+
+    <!-- 151 -->
+    <details>
+      <summary>
+        <div class="title">
+          <strong>Text Chat</strong>
+          <a href="https://www.nexusmods.com/fallout76/mods/151" target="_blank" rel="noreferrer">nexusmods.com/fallout76/mods/151</a>
+        </div>
+        <div class="actions">
+          <button class="primary" data-copy-target="cfg-151">Copy config</button>
+          <button class="secondary" data-open="#cfg-151">Jump</button>
+        </div>
+      </summary>
+      <div class="content">
+        <div class="desc">Paste your config text below.</div>
+        <textarea id="cfg-151" class="cfg" readonly spellcheck="false">[channelVisibilitySettings]
+showEvent=true
+showGlobal=true
+showTrade=true
+showWhispers=true
+
+[chatBoxSettings]
+chatBoxVisibilityTimeout=10
+chatBackground=true
+chatBackgroundColor=111111
+chatBackgroundOpacity=0.5
+chatBoxLocation-X-Coordinate=1510
+chatBoxLocation-Y-Coordinate=820
+chatBoxHeight=200
+chatBoxWidth=400
+
+[chatEntryBoxSettings]
+chatEntryBackgroundColor=222222
+chatEntryFontColor=FFFFCB
+chatEntryHeight=25
+chatEntryOpacity=1
+chatEntryWidth=500
+
+[userListSettings]
+showUserList=false
+userListHeight=500
+userListLocation-X-Coordinate=100
+userListLocation-Y-Coordinate=100
+userListOpacity=0.8
+userListWidth=500
+
+[chatBoxTabSettings]
+chatBoxTabColorFocused=222222
+chatBoxTabColorOpacity=1
+chatBoxTabColorUnfocused=000000
+chatBoxTabFont=$MAIN_Font_Bold
+chatBoxTabTextColor=F5CB5B
+showChatBoxTabs=true
+
+[emojiSettings]
+emojiScale=4
+showEmojis=true
+
+[fontSettings]
+chatBoxFont=$MAIN_Font
+fontSize=12
+alertColor=B384E0
+allianceColor=C5E2B1
+clanColor=CEB1E2
+eventColor=FFC0CB
+globalColor=FFFFCB
+localColor=DB5E5E
+mentionsColor=A18594
+partyColor=85A1C4
+serverColor=F27F5C
+tradeColor=C7CEB1
+whisperColor=FFC7A5
+
+[miscellaneousSettings]
+defaultToGlobalChat=true
+enableRandomNameColors=true
+enableTimestamps=true
+openChatKey=INSERT
+shortenChannelTags=true
+
+[notificationSettings]
+enableChatNoise=true
+enableMentionNoise=true
+enableMentions=true
+playNoiseOnFocusedTabOnly=false
+
+[hudModListSettings]
+hudModList=hudmodloader</textarea>
+      </div>
+    </details>
+
+    <!-- 3106 -->
+    <details>
+      <summary>
+        <div class="title">
+          <strong>Improved Bars and HUD</strong>
+          <a href="https://www.nexusmods.com/fallout76/mods/3106" target="_blank" rel="noreferrer">nexusmods.com/fallout76/mods/3106</a>
+        </div>
+        <div class="actions">
+          <button class="primary" data-copy-target="cfg-3106">Copy config</button>
+          <button class="secondary" data-open="#cfg-3106">Jump</button>
+        </div>
+      </summary>
+      <div class="content">
+        <div class="desc">Paste your config text below.</div>
+        <textarea id="cfg-3106" class="cfg" readonly spellcheck="false">{
+  //Yes yes, I know that adding comments to JSON is a crime against the specification.
+  // Forgive me, Todd
+  "features": [
+    {
+      // Should we automatically realign elements under the HP bar? [Available values: true/false]
+      // Original positions - Weight:  -30,15 Caps: 60,15 Cores: 215,15 Clock: 250,15 
+      // DISABLE THIS IF YOU WANT TO SET A CUSTOM POSITIONS FOT LEFT SIDE WIDGETS (Currencies/Cores/Weight/Clock)
+      "autoAlignLeftGroup": false,
+      // At which percentage the thirst bars should be hidden. Must be a ranged number between 0 and 1, 
+      // Setting this to 100 makes it stay forever.  [Default game value: 0.2 Maximum value: 100]
+      "thirstBarsPercentIndefiniteShow": 100,
+      // Whether to show survival icons or not [Available values: true/false]
+      "showHungerThirstIcons": true,
+      // Debug stuff
+      "showDebugInfo": false,
+      //This subsection defines specific widget settings, as well as the on-screen coordinates for the HUD elements. All positions are relative to the parent containers. Change it only if you have to.
+      // You can set the scale of each widget elements, if you do not like their default sizes. 
+      "widgets": [
+        {
+          "weight": {
+            // Whether to display the player's current carry weight. [Available values: true/false]
+            "enabled": true,
+            // POSITIONING 
+            "x": 10,
+            "y": 35,
+            "scale": 1
+          },
+          "currencies": {
+            //Whether to show the number of bottle caps and optionally other currencies specified in 'showonly' setting. [Available values: true/false]
+            "enabled": true,
+            // Which currencies to show, separated by ';' [Available values "caps", "bullion", "scrips", "stamps", "tadpole", "possum", "supplies", "perks"]
+            // You can change the order of currencies too. Type your desired order separated by ';'
+            "showOnly": "caps;bullion;stamps;scrips;perks;tadpole;possum;supplies",
+            // Should the icons be colored or mono?  [Available values: true/false]  
+            "coloredIcons": true,
+            // POSITIONING
+            // Whether to show icons vertically or hortizonally [Available values: true/false]
+            // autoAlignLeftGroup is disabled for this widget if this feature is enabled. Will mess up things, unless you move each item individually.
+            "vertical": true,
+            "x": -100,
+            "y": -100,
+            "scale": 1
+          },
+          "cores": {
+            // Whether to display the number of fusion cores. [Available values: true/false]
+            "enabled": true,
+            // POSITIONING
+            "x": 100,
+            "y": 35
+          },
+          "clock": {
+            // Displays a clock.
+            // If you see the "not synced" message — open your Pip-Boy radio to sync the time.
+            // If you're still seeing this message after opening pipboy's radio a few times - it means another mod is conflicting with this feature.
+            // It will desync if you minimize the game.
+            "enabled": true,
+            // Which clock to show, separated by ';'.  [Available values "server" - server time, "local" - local time. Default is Server]
+            "mode": "server;local",
+            // Whether to show your local time next to the server time.
+            "use24hFormat": true,
+            // POSITIONING
+            "x": 150,
+            "y": 35,
+            "scale": 1
+          },
+          "weaponcond": {
+            //Whether to show the condition of the currently equipped weapon. [Available values: true/false]
+            "enabled": true,
+            // You can enable weapon name display. If you disable this setting, you'll only see a percentage indicator, e.g., (12.5%). 
+            "showNames": false,
+            // By default, with weapon name display enabled, the widget shows the full name. You can use shortened names to display only the weapon name itself, without legendaries.
+            // It works only in some languages for now. Not in english.
+            "shortenNames": false,
+            // Toggles visibility of the weapon icon
+            "showWeaponIcon": true,
+            "x": -75,
+            "y": -90,
+            "scale": 1
+          },
+          "stats": {
+            //Whether to show the simple SPECIAL widget. [Available values: true/false]
+            "enabled": true,
+            "x": -10,
+            "y": -45,
+            "scale": 1,
+            // Whether to show icons vertically or hortizonally [Available values: true/false, default: false]
+            "vertical": false
+          },
+          // Monitor up to 5 items. TEST ONLY
+          // Pattern accepts a valid regex pattern.
+          // Label is a text displayed on the screen
+          // valuecolor, labelcolor are optional. they sets a color on counter and label fields
+          // =============================================================================================================================================================================================================== //
+          // You need to create an appropriate regex rule for each item. I assume you know how to write regular expressions. Visit https://regex101.com/ if you’re looking for a testing tool. 
+          // If you’re not familiar with this, unfortunately I don’t have time to teach you. You can also use AI tools like chatGPT to generate AS3 regex patterns with the parameters you want, and test it on the site above.
+          // regex flags are always placed after the '/' sign. Eg "/Simpak: Super/i" will match and count all Superstimpaks from your inventory. You can even create a regex that will
+          // count only standard Stimpakss and Super, and exclude Diluted. 
+          // =============================================================================================================================================================================================================== //
+          "itemmonitor": {
+            "enabled": true,
+            "inline": true,
+            "x": -10,
+            "y": 50,
+            "scale": 1,
+            "valueprefix": "",
+            "items": [
+              // This example matches Superstimpaks. English only
+              {
+                "enabled": false,
+                "pattern": "/Stimpak: Super/",
+                "label": "Superstimpak",
+                "valuecolor": "#66ACB7",
+                "labelcolor": "#FFFFCA"
+              },
+              //  This example counts treasury notes
+              {
+                "enabled": false,
+                "pattern": "Treasury Note",
+                "label": "Treasury notes",
+                "valuecolor": "#66ACB7",
+                "labelcolor": "#FFFFCA"
+              },
+              // etc
+              {
+                "enabled": false,
+                "pattern": "/some regex here/",
+                "label": "Whatever",
+                "valuecolor": "#66ACB7",
+                "labelcolor": "#FFFFCA"
+              },
+              {
+                "enabled": false,
+                "pattern": "",
+                "label": "Everything",
+                "valuecolor": "#66ACB7",
+                "labelcolor": "#FFFFCA"
+              },
+              {
+                "enabled": false,
+                "pattern": "",
+                "label": "Everything",
+                "valuecolor": "#66ACB7",
+                "labelcolor": "#FFFFCA"
+              }
+            ]
+          }
+        }
+      ],
+      "colors": [
+        {
+          "global": {
+            "weight": "#FFFFAA",
+            "currencies": "#FFFFAA",
+            "cores": "#FFFFAA",
+            "clock": "#FFFFAA",
+            "weaponcond": "#FFFFCA",
+            "special": {
+              "S": "#779878",
+              "P": "#786D4F",
+              "E": "#66ACB7",
+              "C": "#C58B4C",
+              "I": "#9A9A80",
+              "A": "#BD9079",
+              "L": "#A19AAC"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  //Controls the visibility and display style of bar segments
+  "segments": [
+    {
+      //Enables segmentated health bar. [Available values: true/false]
+      "health": true,
+      //Enables segmentated hunger bar. [Available values: true/false]
+      "hunger": true,
+      //Enables segmentated thirst bar. [Available values: true/false]
+      "thirst": true,
+      //Determines the visual style for each segment widget. Available values are "single" (one segment at 20%) and "full" (four segments every 20%).  
+      "style": [
+        {
+          "health": "full",
+          "hunger": "full",
+          "thirst": "full"
+        }
+      ]
+    }
+  ],
+  //Configures whether specific percentages are displayed, and what suffix to use
+  "percentages": [
+    {
+      //Whether to show percentage  near health bar. [Available values: true/false]
+      "health": false,
+      //Whether to show the original bethesda's percentage near health bar. [Available values: true/false. Setting this to true disables mods's health percentage info. if the percentage disappears completely, you have old HUDMenu (chatmod?)]
+      "bethhealth": false,
+      //Whether to show percentage  near hunger bar. [Available values: true/false]
+      "hunger": false,
+      //Whether to show percentage  near thirst bar. [Available values: true/false]
+      "thirst": false,
+      //Whether to show percentage  near feral bar. [Available values: true/false]
+      "feral": false,
+      //Whether to show percentage  near glow bar. [Available values: true/false]
+      "glow": false,
+      //Percentage postfix. Set it to "" to get rid of it
+      "postfix": "%"
+    }
+  ]
+}</textarea>
+      </div>
+    </details>
+
+    <!-- 3006 -->
+    <details>
+      <summary>
+        <div class="title">
+          <strong>Perk Loadout Manager</strong>
+          <a href="https://www.nexusmods.com/fallout76/mods/3006" target="_blank" rel="noreferrer">nexusmods.com/fallout76/mods/3006</a>
+        </div>
+        <div class="actions">
+          <button class="primary" data-copy-target="cfg-3006">Copy config</button>
+          <button class="secondary" data-open="#cfg-3006">Jump</button>
+        </div>
+      </summary>
+      <div class="content">
+        <div class="desc">Paste your config text below.</div>
+        <textarea id="cfg-3006" class="cfg" readonly spellcheck="false">HUD_CENTREORIGIN=false
+HUD_X=-1
+HUD_Y=1</textarea>
+      </div>
+    </details>
+
+  </div>
+
+  <div id="toast" class="toast">Copied.</div>
+
+  <script>
+    const toast = document.getElementById("toast");
+    let toastTimer = null;
+
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(()=>toast.classList.remove("show"), 1200);
+    }
+
+    async function copyText(text){
+      try{
+        await navigator.clipboard.writeText(text);
+        return true;
+      }catch(e){
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        let ok = false;
+        try{ ok = document.execCommand("copy"); }catch(_){ ok = false; }
+        document.body.removeChild(ta);
+        return ok;
+      }
+    }
+
+    document.addEventListener("click", async (e) => {
+      const btn = e.target.closest("button");
+      if(!btn) return;
+
+      const targetId = btn.getAttribute("data-copy-target");
+      if(targetId){
+        const el = document.getElementById(targetId);
+        if(!el) return;
+        const text = (el.tagName === "TEXTAREA") ? el.value : el.textContent;
+        const ok = await copyText(text);
+        showToast(ok ? "Copied config." : "Copy blocked by browser.");
+      }
+
+      const jump = btn.getAttribute("data-open");
+      if(jump){
+        const el = document.querySelector(jump);
+        if(el) el.scrollIntoView({behavior:"smooth", block:"center"});
+      }
+    });
+  </script>
+</body>
+</html>
