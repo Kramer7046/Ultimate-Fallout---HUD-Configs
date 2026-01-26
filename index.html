@@ -160,11 +160,11 @@
       <p class="hint">Paste each config inside its correlating file replacing all of its contents then save (Ctrl + S). This goes for all hud mods except Perk Loadout Manager.</p>
     </header>
 
-    <details open>
+    <details>
       <summary>
         <div class="title">
           <strong>Fallout76Custom.ini</strong>
-          <span class="pill">Copy, Paste & Replace in your Custom.ini</span>
+          <span class="pill">Paste into your Fallout76Custom.ini (Steam) or Project76Custom.ini (Gamepass)</span>
         </div>
         <div class="actions">
           <button class="primary" data-copy-target="cfg-f76customini">Copy config</button>
@@ -172,7 +172,7 @@
         </div>
       </summary>
       <div class="content">
-        <p class="desc">This block is your Fallout76Custom.ini exactly as provided.</p>
+        <p class="desc">If the file doesn't exist simply create it and ensure spelling and file type is correct.</p>
         <textarea id="cfg-f76customini" class="cfg" spellcheck="false" readonly wrap="off">[General]
 bStreamingWallEnabled=0
 bJobifyMagicUpdate=1
@@ -289,7 +289,7 @@ iMinGrassSize=10</textarea>
         </div>
       </summary>
       <div class="content">
-        <div class="desc">Copy tip: click “Copy config”. (Ctrl+A selects the whole page in embeds.)</div>
+        <div class="desc">Paste into your HUDEditor.xml replacing all of its contents with what you copied, then save.</div>
         <textarea id="cfg-953" class="cfg" readonly spellcheck="false"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <HUDEditor>
 
@@ -1532,7 +1532,7 @@ iMinGrassSize=10</textarea>
         </div>
       </summary>
       <div class="content">
-        <div class="desc">Paste your config text below.</div>
+        <div class="desc">Paste into your HUDPlayerList.json replacing all of its contents with what you copied, then save.</div>
         <textarea id="cfg-2811" class="cfg" readonly spellcheck="false">{
 	// WIDGET SETTINGS
 	"x": 46,
@@ -1780,7 +1780,7 @@ iMinGrassSize=10</textarea>
         </div>
       </summary>
       <div class="content">
-        <div class="desc">Paste your config text below.</div>
+        <div class="desc">Paste into your HUDCondition.json replacing all of its contents with what you copied, then save.</div>
         <textarea id="cfg-3114" class="cfg" readonly spellcheck="false">{
 	// WIDGET SETTINGS
 	"x": 50,
@@ -2214,7 +2214,7 @@ iMinGrassSize=10</textarea>
         </div>
       </summary>
       <div class="content">
-        <div class="desc">Paste your config text below.</div>
+        <div class="desc">This is only here for reference and is included with collection.</div>
         <textarea id="cfg-3144" class="cfg" readonly spellcheck="false">BuffsMeter
 CompatibleShowHealthRedux
 CompatibleWeightIndicator
@@ -2253,7 +2253,7 @@ DynamicPingAudio
         </div>
       </summary>
       <div class="content">
-        <div class="desc">Paste your config text below.</div>
+        <div class="desc">Paste into your VATSPriorityConfig.json replacing all of its contents with what you copied, then save.</div>
         <textarea id="cfg-3297" class="cfg" readonly spellcheck="false">{
 	"debug": 0,
 	
@@ -2442,7 +2442,7 @@ DynamicPingAudio
         </div>
       </summary>
       <div class="content">
-        <div class="desc">Paste your config text below.</div>
+        <div class="desc">Paste into your chatmod.ini replacing all of its contents with what you copied, then save.</div>
         <textarea id="cfg-151" class="cfg" readonly spellcheck="false">[channelVisibilitySettings]
 showEvent=true
 showGlobal=true
@@ -2532,7 +2532,7 @@ hudModList=hudmodloader</textarea>
         </div>
       </summary>
       <div class="content">
-        <div class="desc">Paste your config text below.</div>
+        <div class="desc">Paste into your hudimprovedbars.json replacing all of its contents with what you copied, then save.</div>
         <textarea id="cfg-3106" class="cfg" readonly spellcheck="false">{
   //Yes yes, I know that adding comments to JSON is a crime against the specification.
   // Forgive me, Todd
@@ -2759,7 +2759,7 @@ hudModList=hudmodloader</textarea>
         </div>
       </summary>
       <div class="content">
-        <div class="desc">Paste your config text below.</div>
+        <div class="desc">Paste into your perkloadoutmanager.ini directly underneath version=3, then save.</div>
         <textarea id="cfg-3006" class="cfg" readonly spellcheck="false">HUD_CENTREORIGIN=false
 HUD_X=-1
 HUD_Y=1</textarea>
@@ -2824,3 +2824,4 @@ HUD_Y=1</textarea>
   </script>
 </body>
 </html>
+
