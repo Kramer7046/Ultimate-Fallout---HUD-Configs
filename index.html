@@ -149,7 +149,8 @@
       font-size:12px;
     }
     .toast.show{opacity:1}
-  </style>
+      .pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--border);color:var(--muted);margin-left:8px}
+</style>
 </head>
 <body>
   <div class="wrap">
@@ -161,18 +162,18 @@
 
     <details open>
       <summary>
-        <div class="sum-title">
+        <div class="title">
           <strong>Fallout76Custom.ini</strong>
-          <span class="pill">VERBATIM</span>
+          <span class="pill">Copy, Paste & Replace in your Custom.ini</span>
         </div>
-        <div class="sum-actions">
-          <button class="btn" data-copy-target="cfg-f76customini">Copy config</button>
-          <button class="btn ghost" data-open="#cfg-f76customini">Jump</button>
+        <div class="actions">
+          <button class="primary" data-copy-target="cfg-f76customini">Copy config</button>
+          <button class="secondary" data-open="#cfg-f76customini">Jump</button>
         </div>
       </summary>
       <div class="content">
         <p class="desc">This block is your Fallout76Custom.ini exactly as provided.</p>
-        <textarea id="cfg-f76customini" spellcheck="false" readonly wrap="off">[General]
+        <textarea id="cfg-f76customini" class="cfg" spellcheck="false" readonly wrap="off">[General]
 bStreamingWallEnabled=0
 bJobifyMagicUpdate=1
 bUseThreadedBlood=1
