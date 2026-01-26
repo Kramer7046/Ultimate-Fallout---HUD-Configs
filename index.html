@@ -155,26 +155,24 @@
   <div class="wrap">
     <header>
       <h1>Ultimate Fallout — Config Hub</h1>
-      <p class="sub">Expand a mod, then click “Copy config” to copy only that config.</p>
-      <p class="hint">Paste each config inside its box. This template avoids missing text caused by HTML parsing.</p>
+      <p class="sub">Click “Copy config” to copy only that specific mods contents.</p>
+      <p class="hint">Paste each config inside its correlating file replacing all of its contents then save (Ctrl + S). This goes for all hud mods except Perk Loadout Manager</p>
     </header>
 
-
-    <!-- Fallout76Custom.ini -->
-    <details>
+    <details open>
       <summary>
-        <div class="title">
+        <div class="sum-title">
           <strong>Fallout76Custom.ini</strong>
-          <span class="muted">Full file (as provided)</span>
+          <span class="pill">VERBATIM</span>
         </div>
-        <div class="actions">
-          <button class="primary" data-copy-target="cfg-f76customini">Copy config</button>
-          <button class="secondary" data-open="#cfg-f76customini">Jump</button>
+        <div class="sum-actions">
+          <button class="btn" data-copy-target="cfg-f76customini">Copy config</button>
+          <button class="btn ghost" data-open="#cfg-f76customini">Jump</button>
         </div>
       </summary>
       <div class="content">
-        <div class="desc">Copy/paste this into your <code>Fallout76Custom.ini or Project76Custom.ini</code>.</div>
-        <textarea id="cfg-f76customini" class="cfg" readonly spellcheck="false">[General]
+        <p class="desc">Paste it into your Fallout76Custom.ini (Steam) or Project76Custom.ini (Gamepass) replacing all of its contents with what you copied, then save.</p>
+        <textarea id="cfg-f76customini" spellcheck="false" readonly wrap="off">[General]
 bStreamingWallEnabled=0
 bJobifyMagicUpdate=1
 bUseThreadedBlood=1
@@ -276,8 +274,9 @@ iMinGrassSize=10</textarea>
       </div>
     </details>
 
+
     <!-- 953 -->
-    <details open>
+    <details>
       <summary>
         <div class="title">
           <strong>HUDEditor – iHUD</strong>
@@ -2803,6 +2802,8 @@ HUD_Y=1</textarea>
     document.addEventListener("click", async (e) => {
       const btn = e.target.closest("button");
       if(!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
 
       const targetId = btn.getAttribute("data-copy-target");
       if(targetId){
@@ -2816,10 +2817,7 @@ HUD_Y=1</textarea>
       const jump = btn.getAttribute("data-open");
       if(jump){
         const el = document.querySelector(jump);
-        if(!el) return;
-        const details = el.closest ? el.closest("details") : null;
-        if(details) details.open = true;
-        (details || el).scrollIntoView({behavior:"smooth", block:"center"});
+        if(el) el.scrollIntoView({behavior:"smooth", block:"center"});
       }
     });
   </script>
