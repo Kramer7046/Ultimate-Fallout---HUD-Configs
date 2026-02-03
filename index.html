@@ -151,9 +151,175 @@
     }
     .toast.show{opacity:1}
       .pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--border);color:var(--muted);margin-left:8px}
+
+    /* =========================
+       Fallout terminal theme + responsive hero/background
+       Note: does NOT touch any config textarea contents
+       ========================= */
+
+    :root{
+      --bg:#06140b;
+      --panel: rgba(8, 22, 13, 0.72);
+      --text:#b7ffb7;
+      --muted: rgba(183,255,183,.72);
+      --accent:#34ff7a;
+      --accent2:#9bffbf;
+      --border: rgba(52,255,122,.22);
+      --shadow: rgba(52,255,122,.12);
+    }
+
+    body{
+      font:14px/1.55 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      letter-spacing: .2px;
+      color: var(--text);
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(1200px 700px at 30% 10%, rgba(52,255,122,.10), transparent 55%),
+        linear-gradient(to bottom, rgba(6,20,11,.35), rgba(6,20,11,.86)),
+        image-set(
+          url("/img/bg-desktop-768.avif") 768w type("image/avif"),
+          url("/img/bg-desktop-1280.avif") 1280w type("image/avif"),
+          url("/img/bg-desktop-1920.avif") 1920w type("image/avif"),
+          url("/img/bg-desktop-2560.avif") 2560w type("image/avif"),
+          url("/img/bg-desktop-768.webp") 768w type("image/webp"),
+          url("/img/bg-desktop-1280.webp") 1280w type("image/webp"),
+          url("/img/bg-desktop-1920.webp") 1920w type("image/webp"),
+          url("/img/bg-desktop-2560.webp") 2560w type("image/webp"),
+          url("/img/bg-desktop-1920.jpg") 1920w type("image/jpeg")
+        );
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Mobile art-direction background (taller crop) */
+    @media (max-width: 900px){
+      body{
+        background-image:
+          radial-gradient(900px 520px at 50% 12%, rgba(52,255,122,.10), transparent 55%),
+          linear-gradient(to bottom, rgba(6,20,11,.40), rgba(6,20,11,.90)),
+          image-set(
+            url("/img/bg-mobile-768.avif") 768w type("image/avif"),
+            url("/img/bg-mobile-1080.avif") 1080w type("image/avif"),
+            url("/img/bg-mobile-1440.avif") 1440w type("image/avif"),
+            url("/img/bg-mobile-768.webp") 768w type("image/webp"),
+            url("/img/bg-mobile-1080.webp") 1080w type("image/webp"),
+            url("/img/bg-mobile-1440.webp") 1440w type("image/webp"),
+            url("/img/bg-mobile-1080.jpg") 1080w type("image/jpeg")
+          );
+      }
+    }
+
+    /* Optional "fixed" background only on larger devices (avoid mobile jank) */
+    @media (min-width: 901px){
+      body{ background-attachment: fixed; }
+    }
+
+    /* Subtle scanlines (very light; remove if you dislike) */
+    body::before{
+      content:"";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.00) 0px,
+          rgba(0,0,0,0.00) 2px,
+          rgba(0,0,0,0.08) 3px
+        );
+      mix-blend-mode: overlay;
+      opacity: 0.22;
+    }
+
+    /* Keep content readable above scanlines */
+    .wrap{ position: relative; z-index: 1; }
+
+    /* Full-bleed hero banner */
+    .hero{
+      width: 100%;
+      position: relative;
+      display: grid;
+      place-items: center;
+      margin: 10px 0 6px;
+      padding-left: max(14px, env(safe-area-inset-left));
+      padding-right: max(14px, env(safe-area-inset-right));
+    }
+    .hero-inner{
+      width: 100%;
+      margin: 0 auto;
+    }
+    .hero-banner{
+      width: 100%;
+      height: clamp(240px, 38vw, 560px);
+      display: block;
+    }
+    @media (max-width: 540px){
+      .hero-banner{ height: clamp(200px, 52vw, 360px); }
+    }
+    .hero-banner img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      object-position: center;
+      filter: drop-shadow(0 10px 28px rgba(0,0,0,.45));
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background: radial-gradient(60% 70% at 50% 55%, rgba(52,255,122,.12), transparent 70%);
+    }
+
+    /* Panels/buttons: tighter terminal feel */
+    header h1{
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 0 14px var(--shadow);
+    }
+    .panel, details{
+      border-color: var(--border) !important;
+    }
+    button, .pill{
+      border-color: var(--border) !important;
+    }
+
+    /* Ensure config blocks remain visually stable */
+    textarea, pre, code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+      font-variant-ligatures: none;
+      font-feature-settings: "liga" 0, "calt" 0;
+    }
+
 </style>
+
+<link rel="preload" as="image" href="/img/hero-1920.avif" type="image/avif" imagesizes="100vw">
 </head>
 <body>
+
+<section class="hero" aria-label="Hero banner">
+  <div class="hero-inner">
+    <picture class="hero-banner">
+      <source type="image/avif"
+        srcset="/img/hero-1280.avif 1280w, /img/hero-1920.avif 1920w, /img/hero-2560.avif 2560w"
+        sizes="100vw">
+      <source type="image/webp"
+        srcset="/img/hero-1280.webp 1280w, /img/hero-1920.webp 1920w, /img/hero-2560.webp 2560w"
+        sizes="100vw">
+      <img
+        src="/img/hero-2560.png"
+        width="2560" height="1440"
+        alt="Ultimate Fallout"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async">
+    </picture>
+  </div>
+</section>
+
 <div class="wrap">
 <header>
 <h1>Ultimate Fallout — Config Hub (Revision 24)</h1>
