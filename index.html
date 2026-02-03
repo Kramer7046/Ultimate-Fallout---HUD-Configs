@@ -4,6 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta name="description" content="Ultimate Fallout — HUD config hub. Copy/paste configs with exact formatting."/>
+<meta name="theme-color" content="#06140b"/>
+<meta name="color-scheme" content="dark"/>
 <title>Ultimate Fallout — Config Hub</title>
 <style>
     :root{
@@ -124,7 +127,7 @@
       resize:vertical;
       margin:0;
       padding:12px;
-      background:#0f1417;
+      background:#000;
       border:1px solid var(--border);
       border-radius:10px;
       overflow:auto;
@@ -324,6 +327,32 @@
       font-feature-settings: "liga" 0, "calt" 0;
     }
 
+
+
+    /* Readability: darken expanded collapsible content (does not change textarea contents) */
+    details[open] .content{
+      background: rgba(0,0,0,.70);
+    }
+
+    /* Extra safety: keep textarea styling explicit */
+    details[open] textarea.cfg{
+      background:#000;
+      border:1px solid var(--border);
+    }
+
+
+
+/* Header text-only background highlight + centering */
+header{ text-align:center; }
+.txtbg{
+  display:inline;
+  background: rgba(0,0,0,.72);
+  padding: .18em .5em;
+  border-radius: 8px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 </style>
 
 <link rel="preload" as="image" href="img/hero-1920.avif" type="image/avif" imagesizes="100vw">
@@ -352,9 +381,9 @@
 
 <div class="wrap">
 <header>
-<h1>Ultimate Fallout — Config Hub (Revision 24)</h1>
-<p class="sub">Click “Copy config” to copy only that specific mods contents.</p>
-<p class="hint">Paste each config inside its correlating file replacing all of its contents then save (Ctrl + S). This goes for all hud mods except Perk Loadout Manager.</p>
+<h1><span class="txtbg">Ultimate Fallout — Config Hub (Revision 24)</span></h1>
+<p class="sub"><span class="txtbg">Click “Copy config” to copy only that specific mods contents.</span></p>
+<p class="hint"><span class="txtbg">Paste each config inside its correlating file replacing all of its contents then save (Ctrl + S). This goes for all hud mods except Perk Loadout Manager.</span></p>
 </header>
 <details>
 <summary>
@@ -2939,7 +2968,7 @@ HUD_Y=1</textarea>
 </div>
 </details>
 </div>
-<div class="toast" id="toast">Copied.</div>
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">Copied.</div>
 <script>
     const toast = document.getElementById("toast");
     let toastTimer = null;
