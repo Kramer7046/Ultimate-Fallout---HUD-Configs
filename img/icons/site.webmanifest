@@ -1,0 +1,19 @@
+{
+  "name": "Ultimate Fallout HUD Configs",
+  "short_name": "Ultimate Fallout",
+  "icons": [
+    {
+      "src": "/Ultimate-Fallout---HUD-Configs/img/icons/android-chrome-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/Ultimate-Fallout---HUD-Configs/img/icons/android-chrome-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone"
+}
