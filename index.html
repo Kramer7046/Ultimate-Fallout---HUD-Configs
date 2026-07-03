@@ -442,7 +442,7 @@ details[open]{
 </section>
 <div class="wrap">
 <header>
-<h1><span class="txtbg">Ultimate Fallout — Config Hub (Revision 32)</span></h1>
+<h1><span class="txtbg">Ultimate Fallout — Config Hub (Revision 31)</span></h1>
 <p class="sub"><span class="txtbg">Click “Copy config” to copy only that specific mods contents.</span></p>
 <p class="hint"><span class="txtbg">Paste each config inside its correlating file replacing all of its contents then save (Ctrl + S). This goes for all hud mods except Perk Loadout Manager.</span></p>
 </header>
@@ -460,16 +460,12 @@ details[open]{
 </div>
 </summary>
 <div class="content">
-<div class="desc big">After installing ZFE through the collection, you must move its <strong>dxgi.dll</strong> into the game&#x27;s <strong>root folder</strong> &mdash; the folder that holds the game&#x27;s launch program. Vortex puts it in <code>Data</code>, where it does NOT work.<br/>
+<div class="desc big">ZFE is installed through the collection and Vortex now deploys its <strong>dxgi.dll</strong> straight into the game&#x27;s <strong>root folder</strong> for you &mdash; no manual file moving needed on Steam.<br/>
 <br/>
-<strong>How to find your root folder:</strong><br/>
-&bull; <strong>Steam:</strong> in your library, right-click <strong>Fallout 76</strong> &rarr; <strong>Manage</strong> &rarr; <strong>Browse local files</strong>. The folder that opens IS your root folder &mdash; you will see <code>Fallout76.exe</code> inside it.<br/>
-&bull; <strong>Xbox / Game Pass:</strong> your root folder is where <code>Project76_GamePass.exe</code> lives (inside <code>XboxGames\Fallout 76\Content</code>).<br/>
+<strong>Steam:</strong> just install through the collection and launch the game. If ZFE still isn&#x27;t loading (no console overlay), check that <code>dxgi.dll</code> actually landed next to <code>Fallout76.exe</code> (Steam &rarr; right-click <strong>Fallout 76</strong> &rarr; <strong>Manage</strong> &rarr; <strong>Browse local files</strong>) &mdash; if it&#x27;s missing or still sitting in <code>Data</code>, cut it from <code>Data</code> and paste it into that root folder, then relaunch.<br/>
 <br/>
-<strong>Then move the file:</strong><br/>
-1. Open your <code>Data</code> folder (Steam &rarr; Browse local files &rarr; open <code>Data</code>), find <code>dxgi.dll</code>, and cut it (Ctrl+X).<br/>
-2. Go to the root folder (the one with <code>Fallout76.exe</code>) and paste it there (Ctrl+V).<br/>
-3. Launch the game from Steam.<br/>
+<strong>Xbox / Game Pass:</strong> this deploy-to-root setup has only been verified on Steam so far. Game Pass installs live in a protected folder and use <code>Project76_GamePass.exe</code> instead of <code>Fallout76.exe</code>, so Vortex may not be able to place the file automatically. After installing, check whether <code>dxgi.dll</code> is sitting next to <code>Project76_GamePass.exe</code> (inside <code>XboxGames\Fallout 76\Content</code>). If it&#x27;s not there (or still in <code>Data</code>), cut it from <code>Data</code> and paste it into that folder manually, then launch.<br/>
+<br/>
 <span class="nexus-label">Nexus Link:</span> <a href="https://www.nexusmods.com/fallout76/mods/4065" rel="noopener noreferrer" target="_blank">https://www.nexusmods.com/fallout76/mods/4065</a></div>
 </div>
 </details>
@@ -511,7 +507,7 @@ details[open]{
 </summary>
 <div class="content">
 <p class="desc">Paste into your Fallout76Custom.ini (Steam) or Project76Custom.ini (Gamepass)<br/>If the file doesn't exist simply create it and ensure spelling and file type is correct.</p>
-<textarea class="cfg" data-b64="W0dlbmVyYWxdCmJTdHJlYW1pbmdXYWxsRW5hYmxlZD0wCmJKb2JpZnlNYWdpY1VwZGF0ZT0xCmJVc2VUaHJlYWRlZEJsb29kPTEKYlVzZVRocmVhZGVkTW9ycGhlcj0xCmJVc2VUaHJlYWRlZFBhcnRpY2xlU3lzdGVtPTEKYlVzZVRocmVhZGVkVGVtcEVmZmVjdHM9MQpiVXNlTXVsdGlUaHJlYWRlZFRyZWVzPTEKYlVzZU11bHRpVGhyZWFkZWRGYWNlR2VuPTEKYlVzZVRocmVhZGVkQUk9MQppVGV4dHVyZU1lbW9yeVVwcGVyQm91bmQ9NDI5NDk2NzI5NgppVGV4dHVyZVVwZGF0ZVRocmVzaG9sZD0xNjc3NzIxNgpzSW50cm9TZXF1ZW5jZT0wCnVNYWluTWVudURlbGF5QmVmb3JlQWxsb3dTa2lwPTAKc01haW5NZW51TXVzaWM9RGF0YVxtdXNpY1xzcGVjaWFsXG1paGNfbWFpbnRoZW1lLnh3bQoKW0FyY2hpdmVdCnNSZXNvdXJjZURhdGFEaXJzRmluYWw9CmJJbnZhbGlkYXRlT2xkZXJGaWxlcz0xCnNSZXNvdXJjZUluZGV4RmlsZUxpc3Q9TUlIQ01lbnUgLSBNdXNpYy5iYTIsRk8xQXRoZW5hTWVudS5iYTIsRk8xVGV4dHVyZXMwOC5iYTIsVFpNYXAuYmEyLEQxXzJYLmJhMixEMl8yWC5iYTIsRDNfMlguYmEyLEQ0XzJYLmJhMixENV8yWC5iYTIsRDZfMlguYmEyLEQ3XzJYLmJhMixEQTFfMlguYmEyLERBMl8yWC5iYTIsREEzXzJYLmJhMixEQTRfMlguYmEyLE8xXzJYLmJhMiw3NkhEb19uLmJhMixGQmFyU2V0LmJhMixEb2NPcl9NLmJhMixEb2NPcl9ULmJhMixGYW5jeUJlZE1zaC5iYTIsRmFuY3lCZWRUeC5iYTIsQVBDLmJhMixBUENfTS5iYTIsRkdCX0FpT19NLmJhMixGR0JfQWlPX1QuYmEyLEZha2VfR2xhc3NfQmVnb25lX0RwbF9NLmJhMixGVEJfTS5iYTIsRlRCX1QuYmEyLE5PIFNjdW0gLSBNYWluLmJhMixOTyBTY3VtIC0gVGV4dHVyZXMuYmEyLEJyX1Jldl9NLmJhMixCcl9SZXZfVC5iYTIsQnJfUmV2X1dvb2QuYmEyLEdIX1Jldl9NLmJhMixHSF9SZXZfVC5iYTIsT01fUmV2X00uYmEyLE9NX1Jldl9ULmJhMixHSF9HbGFzc19NLmJhMixHSF9HbGFzc19ULmJhMixCZXRBbmltX00uYmEyLEJldEFuaW1fVC5iYTIsQmVhbXMuYmEyLEVuaGFuY2VkQmxvb2QgLSBNZXNoZXMuYmEyLEVuaGFuY2VkQmxvb2QgLSBUZXh0dXJlcy5iYTIsRVdTcGxhc2hfTWVkaXVtLmJhMixQcm9wcyAtIE1haW4uYmEyLFByb3BzIC0gVGV4dHVyZXMuYmEyLEJldHRlciBNaXJyb3JzX00uYmEyLEJldHRlciBNaXJyb3JzX1QuYmEyLHdpbmRvb3IuYmEyLERpcmFuYXJzX1BBTGlnaHRfVXAuYmEyLENDTzc2IC0gTWFpbi5iYTIsQUZSLmJhMiwyeEFybW9yQ2xvdGhpbmcuYmEyLEhERml4ZWRCZXJldC5iYTIsTnVrYV9NLmJhMixOdWthX1QuYmEyLDJ4UG93ZXJBcm1vci5iYTIsUEFfQnVuZGxlLmJhMixSZWNvblBBX00uYmEyLFJlY29uUEFfVC5iYTIsMnhXZWFwb25zLmJhMixBQV9NLmJhMixBQV9ULmJhMixHbG9vbXkgQUlPIChBbGwtSW4tT25lKSAyLjIuYmEyLDR4IFdvcmtzdGF0aW9ucy5iYTIsRmlyZXBsYWNlcy5iYTIsRmlyZV9FeHRpbmd1aXNoZXJfb2xkX00uYmEyLEZpcmVfRXh0aW5ndWlzaGVyX29sZF9ULmJhMixXYXRlclNELmJhMixCZWx0UGFjay5iYTIsSGVhcnRiYWdzLU0uYmEyLEhlYXJ0YmFncy1ULmJhMixIZWFydGJhZ3MtRml4LmJhMix1Z2x5IHRleHR1cmVzIGdvbmUuYmEyLFBvQV9MaWdodHMuYmEyLGJ1c3R2LmJhMixTSUFfTS5iYTIsU0lBLmJhMixFRl9NLmJhMixFRl9ULmJhMixwbGFudF9nbG93LmJhMixGTE9SQU5JTV9NLmJhMixGTE9SQU5JTV9ULTJLLmJhMixQcmlja2V5ZUdsb3cuYmEyLEJIUF9NLmJhMixBQ0FCNzZfaG90dHViTS5iYTIsQUNBQjc2X2hvdHR1YlQuYmEyLEVWQjc2RklYX00uYmEyLEVWQjc2RklYR19NLmJhMixFVkI3NkZJWF9ULmJhMixHaG91bCBUZXh0dXJlcy5iYTIsZXZiX2dob3VsX2ZpeF9ULmJhMixMb3N0X0VWQl9UZXh0dXJlcy5iYTIsRVZCNzZfRklYX0xvc3QuYmEyLEVWQl9CQVQuYmEyLExVbmRfTS5iYTIsTFVuZF9ULmJhMixNYWxlVW5kZXJ3ZWFyLmJhMixXU0hfVC5iYTIsU0ZfUmV0cm9QUF9NLmJhMixTRl9SZXRyb1BQX1QuYmEyLFNGX1JldHJvUFBfMV9NLmJhMixBQ0FCNzZfY29ycHNlc00uYmEyLEFDQUI3Nl9jb3Jwc2VzVC5iYTIsRXllc09mQXBwYWxhY2hpYS5iYTIsU2NvcmNoZWRIZWFkRXhwbG9zaW9uLmJhMixCZXR0ZXJHbG93aW5nTW9sZU1pbmVyLmJhMixCZXR0ZXJXZW5kaWdvcy5iYTIsU2NvcmNoZWQgU2NvcmNoYmVhc3RzLmJhMixVU0JRLTgtU3RhcnNoaXBfTWFpbi5iYTIsVVNCUV9UZXh0dXJlcy5iYTIsVVNCUV9CcmlnaHRlcldpbmdzNEsuYmEyLEhERG9vcm1hdC5iYTIsTnVrYUNvbGFEb29yR2xhc3NGaXguYmEyLFByb3RlY3Ryb25HbGFzc0ZpeC5iYTIsQWxpZW4gZ2xhc3MgZml4LmJhMixBb1NfQXF1YXJpdW0uYmEyLEFvU19BcXVhcml1bV9ULmJhMixQcmV0dHlTa3lNLmJhMixQcmV0dHlTa3lULmJhMixQODBqZXRfTS5iYTIsUDgwamV0X1QuYmEyLFZCMDJfTS5iYTIsVkIwMl9ULmJhMixRdWFsaXR5IEN1YmVNYXBzIC0gSEQgQ3ViZSBNYXBzLmJhMixTVFNfTS5iYTIsU1RTX1QuYmEyLFZUbWFza0Ffc3VyZ19NLmJhMixWVG1hc2tBX3N1cmdfVC5iYTIsU0ZfQktfQWlPX00uYmEyLFNGX0JLX0FpT19ULmJhMixzY2ktZmktcGFuZWxzX00uYmEyLHNjaS1maS1wYW5lbHNfVC5iYTIsQkxCX00uYmEyLEJMQl9ULmJhMixMU3RyaW5nQ0IxOV9NLmJhMixMU3RyaW5nQ0IxOV9ULmJhMixMU3RyaW5nQ0IxOV9UVC5iYTIsU0ZfQ3Jvc3NCX00uYmEyLFNGX0Nyb3NzQl9ULmJhMixzZWN1cml0cm9uX3ZlbmRvcmJvdC5iYTIsQW9TX1BvdHRlZFBsYW50X1RleC5iYTIsQW9TX1BvdHRlZFBsYW50X1NldDA2LmJhMixGaXNoVGFua19NLmJhMixGaXNoVGFua19ULmJhMixIQnJhaF9NLmJhMixIQnJhaF9ULmJhMixUTXVtbXlfTS5iYTIsVE11bW15X1QuYmEyLE1vbm5vX0Jpa2luaV9NLmJhMixNb25ub19CaWtpbmlfVC5iYTIsUGVya0JvYXJkVGV4UmVwLkJBMixQZXJrQm9hcmRUZXhSZXAyLkJBMixXaWxsb3dUcmVlTS5iYTIsV2lsbG93VHJlZVQuYmEyLHNjaWZpX0FEX00uYmEyLHNjaWZpX0FEX1QuYmEyLFNjcmFwTS5iYTIsU2NyYXBULmJhMixBU0JfTS5iYTIsQVNCX1QuYmEyLFNjaS1GaV9BQ1RfTS5iYTIsU2NpLUZpX0FDVF9ULmJhMixTRl9xdWlldF9NLmJhMixTRl9xdWlldF9ULmJhMixTRl9JbmVzX00uYmEyLFNGX0luZXNfVC5iYTIsU0ZfTVJfTS5iYTIsU0ZfTVJfVC5iYTIsU0ZfU1BfTS5iYTIsU0ZfU1BfVC5iYTIsTGlnaHRGaXh0dXJlcyAtIE1haW4uYmEyLExpZ2h0Rml4dHVyZXMgLSBUZXh0dXJlcy5iYTIsRW5jRm91bi5iYTIsRW5jUGVyLmJhMixNYXJpbmVBUENfTS5iYTIsTWFyaW5lQVBDX1QuYmEyLE1ldGFsX0JhcnJlbHMuYmEyLEJvU19UYWNfQmFja3BhY2suYmEyLFRWX0ZpeF9NLmJhMixUVl9GaXhfVC5iYTIsQW1pZ2FfTS5iYTIsQW1pZ2FfVC5iYTIsUkxQLmJhMixQZXBwZXJTaGFrZXJCbGFja1JlZC5iYTIsQmV0dGVyTG9kZ2UuYmEyLEJldHRlckxvZGdlX1QuYmEyLENvb2tpbmdTdG92ZSAtIFJlZExlc3MuYmEyLEtpdGNoZW5zZXQgLSBUZXh0dXJlcy5iYTIsU0ZfQ1BMX00uYmEyLFNGX0NQTF9ULmJhMixNaWxpdGFyeU1hcHMuYmEyLEJldHRlckdJVERNYXAuYmEyLGJvYmJlcl9NLmJhMixib2JiZXJfVC5iYTIsYm9iYmVyX0cuYmEyLEdsb3dpbmcgQ1NQIEJvYmJlcnMuYmEyLExpZ2h0YnVsYl9Cb2JiZXJfTS5iYTIsTGlnaHRidWxiX0JvYmJlcl9ULmJhMixHbG93LmJhMixHbG93TWFwRnJhZ21lbnRzLmJhMixCZXR0ZXJfQkhfTS5iYTIsQmV0dGVyX0JIX1QuYmEyLEdsb3dpbmdHbG93aW5nQm9iYmxlaGVhZHMuYmEyLEdsb3dpbmdLZXlzLmJhMixNYWluZnJhbWVfQ29yZXNfR2xvdy5iYTIsR2xvd2luZyBTY29yY2hlZC5iYTIsQm9iYmxlR2xvdy5iYTIsQ2Fwc1Rpbi5iYTIsb3JlX2dsb3cuYmEyLENQX3BhbmFtX00uYmEyLENQX3BhbmFtX1QuYmEyLEVTUF9UZWRkeUJlYXJzLmJhMixGU19NLmJhMixGU19ULmJhMixnbG9yaWFfTS5iYTIsZ2xvcmlhX1QuYmEyLExlYXRoZXJTX00uYmEyLExlYXRoZXJTX1QuYmEyLExpbGx5X00uYmEyLExpbGx5X1QuYmEyLE1hZ0RhZ19NLmJhMixNYWdEYWdfVC5iYTIsUGlyYXRlX00uYmEyLFBpcmF0ZV9ULmJhMixWSF9ULmJhMixBU0xfVC5iYTIsVkNIQV9NLmJhMixWQ0hBX1QuYmEyLFNGX1BpZ1RhaWxzX00uYmEyLFNGX1BpZ1RhaWxzX1QuYmEyLFNjaUZpRG9nX1QuYmEyCgpzUmVzb3VyY2VBcmNoaXZlMkxpc3Q9SFVERWRpdG9yX0lIVUQuYmEyLENhbXBCdWRnZXRBbmRCdWlsZGluZ0Nvc3RzLmJhMixGYXN0VGVybWluYWxzLmJhMixFYXN5SGFja2luZy5iYTIsUXVpY2tCb3lYMS4wU0MuYmEyLFBBRnJpZW5kbHlVSS5iYTIsSFVEQ29uZGl0aW9uLmJhMixIVURDb25kaXRpb25fVmF1bHRHaXJsUGFjay5iYTIsSFVEUGxheWVyTGlzdC5iYTIsUGVya0xvYWRvdXRNYW5hZ2VyLUhNTC5iYTIsSW1wcm92ZWRQaXBib3lTdGF0cy5iYTIsQmV0dGVySW52ZW50b3J5LVVPLmJhMixNb2Rlcm5TY29wZXMuYmEyLGxvYWRpbmdTY3JlZW5PdmVyaGF1bF9zbWFsbGVyX3YwLjIuYmEyLFZBVFNQcmlvcml0eS5iYTIsSW1wcm92ZWRIQlMyMS5iYTIsQnVmZnNNZXRlci5iYTIsSFVETW9kTG9hZGVyLmJhMiw3NlVsdGltYXRlQXVkaW9PdmVyaGF1bCAtIHYzLmJhMixRdWlja0RyYXc3Ni5iYTIsQXBwYWxhY2hpYVdhcmZhcmUgLSBXZWFwb25zLmJhMixBcHBhbGFjaGlhV2FyZmFyZSAtIEJ1bGxldHMuYmEyLEFwcGFsYWNoaWFXYXJmYXJlIC0gRXhwbG9zaW9ucy5iYTIsSVJHU08uYmEyLEdhdXNzV2VhcG9uRnVsbENoYXJnZVNvdW5kLkJBMixTaWxlbnRFeHBsb3NpdmVCdWxsZXRzLmJhMixETSBBbHRlcm5hdGUgQ2FubmliYWwgU291bmRzLmJhMixTTVRNIFBpY2sgTWUgVXAuYmEyLEJldHRlckNvbGxlY3RpYmxlRmluZGVyU291bmRzLkJBMixFbW90ZSBzb3VuZCByZXBsYWNlcjEuMy5iYTIsTU9EX0JldHRlckV4cGxvc2lvbnMuYmEyLExvY2twaWNrX0xhdWdoX3RyYWNrX21vZC5iYTIsTW9yZUFuaW1hdGlvbnMuYmEyLEFuaW1OZXcuYmEyLFBBX0Zhc3RBTklNLmJhMixsb3dlcmVkX2FkZG9uLmJhMixIb2xzdGVyZWRTcHJpbnRIYW5kcy5CQTIsTWluaWd1bl9SZWZsZXhOdWxsLmJhMixQQS1Ib2xvSFVELmJhMixQUEhtaXhfS0YxLmJhMixNV1IgSGFuZG1hZGUgUmlmbGUgUmVwbGFjZXIgLSBNYWluLmJhMixNV1IgSGFuZG1hZGUgUmlmbGUgUmVwbGFjZXIgLSBUZXh0dXJlcy5iYTIsVDYwbmV3X00uYmEyLFQ2MG5ld19ULmJhMixFVkJfVUEuYmEyLEVWQl9VQU0uYmEyLFRGMiBQdWxzZSBCbGFkZSAtIE1haW4uYmEyLFRGMiBQdWxzZSBCbGFkZSAtIFRleHR1cmVzLmJhMixJbnZpc2lXb29kUGlsZXMuYmEyLFdTX1Rlcm0uYmEyLEZQU0Jvb3N0LmJhMixNb3JlLVZpYnJhbmN5LmJhMixudWNsZXVzLmJhMixFbmNsYXZlRnVzaW9uY29yZS5iYTIsTUdFX00uYmEyLE1HRV9ULmJhMixtNDhfcGF0dG9uX00uYmEyLG00OF9wYXR0b25fVC5iYTIsVlRzcGFfTS5iYTIsVlRzcGFfVC5iYTIsRW5jbGF2ZVJ1Zy5iYTIsSFQwMV9NLmJhMixIVDAxX1QuYmEyLFNTX09EU1RfTS5iYTIsU1NfT0RTVF9ULmJhMixCb2JibGVoZWFkU3RhbmRfTS5iYTIsQm9iYmxlaGVhZFN0YW5kX1QuYmEyLFNHX2RlY29uX00uYmEyLFNHX2RlY29uX1QuYmEyLE0xNkExX0hNX00uYmEyLE0xNkExX0hNX1QuYmEyLE00QTFfQVJfTS5iYTIsTTRBMV9BUl9ULmJhMixzdHJpa2VfTS5iYTIsVENfUHJvdG9fTS5iYTIsVENfUHJvdG9fVC5iYTIsbWFnemhpcmVzbm9sb2dvLmJhMgoKW0Rpc3BsYXldCmlQcmVzZW50SW50ZXJ2YWw9MApmRE9GQmxlbmRSYXRpbz0wCmZWQVRTQnJpZ2h0bmVzcz0wLjUKZlZBVFNPdXRsaW5lVGhpY2tuZXNzPTAuNQpmVkFUU1NjYW5saW5lRnJlcXVlbmN5PTE4MC4wMDAwMDAKZlZBVFNWU2NhblN0YXRlPS00LjAwMDAwMAoKW1ZBVFNdCmJWQVRTQmx1cj0wCmJWQVRTRk9WQXNEaXN0YW5jZVRvVGFyZ2V0PTAKZlZBVFNBaW1TcHJpbmdEZWFkem9uZVNwZWVkPTEwMDAwMApmVkFUU0FpbVNwcmluZ01heD0xMDAwMDAKZlZBVFNBaW1TcHJpbmdNaW49MC4wCmZWQVRTQWltU3ByaW5nU2NyZWVuRGVhZHpvbmU9MApmVkFUU0JsdXJTdHJlbmd0aD0wCmZWQVRTQ2xvc2VNZW51VGltZT0xMDAwMC4wCmZWQVRTRGlzdGFuY2VNb2RpZmllcj0xMApmVmF0c0VmZmVjdEJ1cnN0RmFkZVJhdGU9MC4wCmZWYXRzRWZmZWN0QnVyc3RJbnRlbnNpdHk9MC4wCmZWYXRzRWZmZWN0RGVmYXVsdEJ1cnN0PTAuMApmVmF0c0VmZmVjdERlZmF1bHRPdXRsaW5lPTEKZlZhdHNFZmZlY3RGbGlja2VyQnJpZ2h0bmVzcz0tMC4xMDAwMDAwMDE1CmZWYXRzRWZmZWN0RmxpY2tlckRlbGF5TWF4PTE1LjAKZlZhdHNFZmZlY3RGbGlja2VyRGVsYXlNaW49NS4wCmZWYXRzRWZmZWN0RmxpY2tlckR1cmF0aW9uTWF4PTAuNjAwMDAwMDIzOApmVmF0c0VmZmVjdEZsaWNrZXJEdXJhdGlvbk1pbj0wLjEwMDAwMDAwMTQKZlZhdHNFZmZlY3RGbGlja2VyRnJlcXVlbmN5PTIyLjAKZlZhdHNFZmZlY3RQdWxzZUludGVuc2l0eT0wLjUKZlZhdHNFZmZlY3RQdWxzZVJhdGU9MC41CmZWYXRzRWZmZWN0U2NhbmxpbmVGcmVxdWVuY3k9MC41CmZWYXRzRWZmZWN0VmVydGljYWxTY2FuRGVsYXlNYXg9MQpmVmF0c0VmZmVjdFZlcnRpY2FsU2NhbkRlbGF5TWluPTAuNQpmVmF0c0VmZmVjdFZlcnRpY2FsU2NhblJhdGU9MC41CmZWQVRTRW50ZXJTZWM9MC4wCmZWQVRTRXhpdFNlYz0wLjAKZlZBVFNGT1ZSZXZlcnRSYXRlPTAKZlZBVFNJbml0aWFsVGFyZ2V0QW5nbGVXZWlnaHQ9MApmVkFUU0xpZ2h0QW5nbGU9MC4wCmZWYXRzTGlnaHRDb2xvckI9MC42OTk5OTk5ODgKZlZhdHNMaWdodENvbG9yRz0wLjY5OTk5OTk4OApmVmF0c0xpZ2h0Q29sb3JSPTAuNjk5OTk5OTg4CmZWQVRTTGlnaHREaXN0YW5jZT0xMDAuMApmVkFUU0xpZ2h0RWxldmF0aW9uPTEwMC4wCmZWQVRTTGlnaHRMZXZlbE1heD00MDAuMApmVkFUU0xpZ2h0TGV2ZWxNaW49LTEwMC4wCmZWQVRTTG9va0F0RXh0ZW50U3ByaW5nPTQwCmZWQVRTTG9va0F0UG9zaXRpb25TcHJpbmc9NDAKZlZBVFNNaW5pbXVtVmlzaWJpbGl0eT0wLjAKZlZBVFNPY2NsdXNpb25RdWVyeUlzc3VlU2VjPTAKZlZBVFNQYXJ0Q2hhbmNlVXBkYXRlU2VjPTAKZlZBVFNQYXJ0U2VsZWN0RGlzdGFuY2VXZWlnaHQ9MApmVkFUU1BvdGVudGlhbFRhcmdldFJheWNhc3REaXN0PTAKZlZBVFNTdGF0aWNGT1Y9MApmVkFUU1N0YXRpY0ZPVlNwcmluZz0wCnVWQVRTVGFyZ2V0RWZmZWN0Q29sb3JCPTQ5CnVWQVRTVGFyZ2V0RWZmZWN0Q29sb3JHPTEwMAp1VkFUU1RhcmdldEVmZmVjdENvbG9yUj0xMApmVkFUU1RhcmdldFNlbGVjdEJvcmRlcj0zNjAKZlZBVFNUYXJnZXRTZWxlY3RNaW5GT1ZEZWdyZWVzPTM2MApmVkFUU1RhcmdldFVwZGF0ZVNlYz0wLjUKZlZBVFNXYWl0SW50cm9EZWxheT0wCmZWQVRTV2FpdFdlYXBvblNpZ2h0ZWRSZWxlYXNlPTAK" id="cfg-f76customini" readonly="" spellcheck="false" wrap="off">[General]
+<textarea class="cfg" data-b64="W0dlbmVyYWxdDQpiU3RyZWFtaW5nV2FsbEVuYWJsZWQ9MA0KYkpvYmlmeU1hZ2ljVXBkYXRlPTENCmJVc2VUaHJlYWRlZEJsb29kPTENCmJVc2VUaHJlYWRlZE1vcnBoZXI9MQ0KYlVzZVRocmVhZGVkUGFydGljbGVTeXN0ZW09MQ0KYlVzZVRocmVhZGVkVGVtcEVmZmVjdHM9MQ0KYlVzZU11bHRpVGhyZWFkZWRUcmVlcz0xDQpiVXNlTXVsdGlUaHJlYWRlZEZhY2VHZW49MQ0KYlVzZVRocmVhZGVkQUk9MQ0KaVRleHR1cmVNZW1vcnlVcHBlckJvdW5kPTQyOTQ5NjcyOTYNCmlUZXh0dXJlVXBkYXRlVGhyZXNob2xkPTE2Nzc3MjE2DQpzSW50cm9TZXF1ZW5jZT0wDQp1TWFpbk1lbnVEZWxheUJlZm9yZUFsbG93U2tpcD0wDQpzTWFpbk1lbnVNdXNpYz1EYXRhXG11c2ljXHNwZWNpYWxcbWloY19tYWludGhlbWUueHdtDQoNCltBcmNoaXZlXQ0Kc1Jlc291cmNlRGF0YURpcnNGaW5hbD0NCmJJbnZhbGlkYXRlT2xkZXJGaWxlcz0xDQpzUmVzb3VyY2VJbmRleEZpbGVMaXN0PU1JSENNZW51IC0gTXVzaWMuYmEyLEZPMUF0aGVuYU1lbnUuYmEyLEZPMVRleHR1cmVzMDguYmEyLFRaTWFwLmJhMixEMV8yWC5iYTIsRDJfMlguYmEyLEQzXzJYLmJhMixENF8yWC5iYTIsRDVfMlguYmEyLEQ2XzJYLmJhMixEN18yWC5iYTIsREExXzJYLmJhMixEQTJfMlguYmEyLERBM18yWC5iYTIsREE0XzJYLmJhMixPMV8yWC5iYTIsNzZIRG9fbi5iYTIsRkJhclNldC5iYTIsRG9jT3JfTS5iYTIsRG9jT3JfVC5iYTIsRmFuY3lCZWRNc2guYmEyLEZhbmN5QmVkVHguYmEyLEFQQy5iYTIsQVBDX00uYmEyLEZHQl9BaU9fTS5iYTIsRkdCX0FpT19ULmJhMixGYWtlX0dsYXNzX0JlZ29uZV9EcGxfTS5iYTIsRlRCX00uYmEyLEZUQl9ULmJhMixOTyBTY3VtIC0gTWFpbi5iYTIsTk8gU2N1bSAtIFRleHR1cmVzLmJhMixCcl9SZXZfTS5iYTIsQnJfUmV2X1QuYmEyLEJyX1Jldl9Xb29kLmJhMixHSF9SZXZfTS5iYTIsR0hfUmV2X1QuYmEyLE9NX1Jldl9NLmJhMixPTV9SZXZfVC5iYTIsR0hfR2xhc3NfTS5iYTIsR0hfR2xhc3NfVC5iYTIsQmV0QW5pbV9NLmJhMixCZXRBbmltX1QuYmEyLEJlYW1zLmJhMixFbmhhbmNlZEJsb29kIC0gTWVzaGVzLmJhMixFbmhhbmNlZEJsb29kIC0gVGV4dHVyZXMuYmEyLEVXU3BsYXNoX01lZGl1bS5iYTIsRW5jRm91bi5iYTIsRW5jUGVyLmJhMixQcm9wcyAtIE1haW4uYmEyLFByb3BzIC0gVGV4dHVyZXMuYmEyLEJldHRlciBNaXJyb3JzX00uYmEyLEJldHRlciBNaXJyb3JzX1QuYmEyLHdpbmRvb3IuYmEyLERpcmFuYXJzX1BBTGlnaHRfVXAuYmEyLENDTzc2IC0gTWFpbi5iYTIsQUZSLmJhMiwyeEFybW9yQ2xvdGhpbmcuYmEyLEhERml4ZWRCZXJldC5iYTIsTnVrYV9NLmJhMixOdWthX1QuYmEyLDJ4UG93ZXJBcm1vci5iYTIsUEFfQnVuZGxlLmJhMixSZWNvblBBX00uYmEyLFJlY29uUEFfVC5iYTIsMnhXZWFwb25zLmJhMixBQV9NLmJhMixBQV9ULmJhMixHbG9vbXkgQUlPIChBbGwtSW4tT25lKSAyLjIuYmEyLDR4IFdvcmtzdGF0aW9ucy5iYTIsRmlyZXBsYWNlcy5iYTIsRmlyZV9FeHRpbmd1aXNoZXJfb2xkX00uYmEyLEZpcmVfRXh0aW5ndWlzaGVyX29sZF9ULmJhMixXYXRlclNELmJhMixCZWx0UGFjay5iYTIsSGVhcnRiYWdzLU0uYmEyLEhlYXJ0YmFncy1ULmJhMixIZWFydGJhZ3MtRml4LmJhMix1Z2x5IHRleHR1cmVzIGdvbmUuYmEyLFBvQV9MaWdodHMuYmEyLGJ1c3R2LmJhMixTSUFfTS5iYTIsU0lBLmJhMixFRl9NLmJhMixFRl9ULmJhMixwbGFudF9nbG93LmJhMixGTE9SQU5JTV9NLmJhMixGTE9SQU5JTV9ULTJLLmJhMixQcmlja2V5ZUdsb3cuYmEyLEJIUF9NLmJhMixBQ0FCNzZfaG90dHViTS5iYTIsQUNBQjc2X2hvdHR1YlQuYmEyLEVWQjc2RklYX00uYmEyLEVWQjc2RklYR19NLmJhMixFVkI3NkZJWF9ULmJhMixHaG91bCBUZXh0dXJlcy5iYTIsZXZiX2dob3VsX2ZpeF9ULmJhMixMb3N0X0VWQl9UZXh0dXJlcy5iYTIsRVZCNzZfRklYX0xvc3QuYmEyLEVWQl9CQVQuYmEyLExVbmRfTS5iYTIsTFVuZF9ULmJhMixNYWxlVW5kZXJ3ZWFyLmJhMixXU0hfVC5iYTIsU0ZfUmV0cm9QUF9NLmJhMixTRl9SZXRyb1BQX1QuYmEyLFNGX1JldHJvUFBfMV9NLmJhMixBQ0FCNzZfY29ycHNlc00uYmEyLEFDQUI3Nl9jb3Jwc2VzVC5iYTIsRXllc09mQXBwYWxhY2hpYS5iYTIsU2NvcmNoZWRIZWFkRXhwbG9zaW9uLmJhMixCZXR0ZXJHbG93aW5nTW9sZU1pbmVyLmJhMixCZXR0ZXJXZW5kaWdvcy5iYTIsU2NvcmNoZWQgU2NvcmNoYmVhc3RzLmJhMixVU0JRLTgtU3RhcnNoaXBfTWFpbi5iYTIsVVNCUV9UZXh0dXJlcy5iYTIsVVNCUV9CcmlnaHRlcldpbmdzNEsuYmEyLEhERG9vcm1hdC5iYTIsTnVrYUNvbGFEb29yR2xhc3NGaXguYmEyLFByb3RlY3Ryb25HbGFzc0ZpeC5iYTIsQWxpZW4gZ2xhc3MgZml4LmJhMixBb1NfQXF1YXJpdW0uYmEyLEFvU19BcXVhcml1bV9ULmJhMixQcmV0dHlTa3lNLmJhMixQcmV0dHlTa3lULmJhMixQODBqZXRfTS5iYTIsUDgwamV0X1QuYmEyLFZCMDJfTS5iYTIsVkIwMl9ULmJhMixRdWFsaXR5IEN1YmVNYXBzIC0gSEQgQ3ViZSBNYXBzLmJhMixTVFNfTS5iYTIsU1RTX1QuYmEyLFZUbWFza0Ffc3VyZ19NLmJhMixWVG1hc2tBX3N1cmdfVC5iYTIsU0ZfQktfQWlPX00uYmEyLFNGX0JLX0FpT19ULmJhMixzY2ktZmktcGFuZWxzX00uYmEyLHNjaS1maS1wYW5lbHNfVC5iYTIsQkxCX00uYmEyLEJMQl9ULmJhMixMU3RyaW5nQ0IxOV9NLmJhMixMU3RyaW5nQ0IxOV9ULmJhMixMU3RyaW5nQ0IxOV9UVC5iYTIsU0ZfQ3Jvc3NCX00uYmEyLFNGX0Nyb3NzQl9ULmJhMixzZWN1cml0cm9uX3ZlbmRvcmJvdC5iYTIsQW9TX1BvdHRlZFBsYW50X1RleC5iYTIsQW9TX1BvdHRlZFBsYW50X1NldDA2LmJhMixGaXNoVGFua19NLmJhMixGaXNoVGFua19ULmJhMixIQnJhaF9NLmJhMixIQnJhaF9ULmJhMixUTXVtbXlfTS5iYTIsVE11bW15X1QuYmEyLE1vbm5vX0Jpa2luaV9NLmJhMixNb25ub19CaWtpbmlfVC5iYTIsUGVya0JvYXJkVGV4UmVwLkJBMixQZXJrQm9hcmRUZXhSZXAyLkJBMixXaWxsb3dUcmVlTS5iYTIsV2lsbG93VHJlZVQuYmEyLHNjaWZpX0FEX00uYmEyLHNjaWZpX0FEX1QuYmEyLFNjcmFwTS5iYTIsU2NyYXBULmJhMixBU0JfTS5iYTIsQVNCX1QuYmEyLFNjaS1GaV9BQ1RfTS5iYTIsU2NpLUZpX0FDVF9ULmJhMixTRl9xdWlldF9NLmJhMixTRl9xdWlldF9ULmJhMixTRl9JbmVzX00uYmEyLFNGX0luZXNfVC5iYTIsU0ZfTVJfTS5iYTIsU0ZfTVJfVC5iYTIsU0ZfU1BfTS5iYTIsU0ZfU1BfVC5iYTIsTGlnaHRGaXh0dXJlcyAtIE1haW4uYmEyLExpZ2h0Rml4dHVyZXMgLSBUZXh0dXJlcy5iYTIsTWFyaW5lQVBDX00uYmEyLE1hcmluZUFQQ19ULmJhMixNZXRhbF9CYXJyZWxzLmJhMixCb1NfVGFjX0JhY2twYWNrLmJhMixUVl9GaXhfTS5iYTIsVFZfRml4X1QuYmEyLEFtaWdhX00uYmEyLEFtaWdhX1QuYmEyLFJMUC5iYTIsUGVwcGVyU2hha2VyQmxhY2tSZWQuYmEyLEJldHRlckxvZGdlLmJhMixCZXR0ZXJMb2RnZV9ULmJhMixDb29raW5nU3RvdmUgLSBSZWRMZXNzLmJhMixLaXRjaGVuc2V0IC0gVGV4dHVyZXMuYmEyLFNGX0NQTF9NLmJhMixTRl9DUExfVC5iYTIsTWlsaXRhcnlNYXBzLmJhMixCZXR0ZXJHSVRETWFwLmJhMixib2JiZXJfTS5iYTIsYm9iYmVyX1QuYmEyLGJvYmJlcl9HLmJhMixHbG93aW5nIENTUCBCb2JiZXJzLmJhMixMaWdodGJ1bGJfQm9iYmVyX00uYmEyLExpZ2h0YnVsYl9Cb2JiZXJfVC5iYTIsR2xvdy5iYTIsR2xvd01hcEZyYWdtZW50cy5iYTIsQmV0dGVyX0JIX00uYmEyLEJldHRlcl9CSF9ULmJhMixHbG93aW5nR2xvd2luZ0JvYmJsZWhlYWRzLmJhMixHbG93aW5nS2V5cy5iYTIsTWFpbmZyYW1lX0NvcmVzX0dsb3cuYmEyLEdsb3dpbmcgU2NvcmNoZWQuYmEyLEJvYmJsZUdsb3cuYmEyLENhcHNUaW4uYmEyLG9yZV9nbG93LmJhMixDUF9wYW5hbV9NLmJhMixDUF9wYW5hbV9ULmJhMixFU1BfVGVkZHlCZWFycy5iYTIsRlNfTS5iYTIsRlNfVC5iYTIsZ2xvcmlhX00uYmEyLGdsb3JpYV9ULmJhMixMZWF0aGVyU19NLmJhMixMZWF0aGVyU19ULmJhMixMaWxseV9NLmJhMixMaWxseV9ULmJhMixNYWdEYWdfTS5iYTIsTWFnRGFnX1QuYmEyLFBpcmF0ZV9NLmJhMixQaXJhdGVfVC5iYTIsVkhfVC5iYTIsQVNMX1QuYmEyLENsZWFuQXhvQXF1YXJpdW1fTS5iYTIsQ2xlYW5BeG9BcXVhcml1bV9ULmJhMixWQ0hBX00uYmEyLFZDSEFfVC5iYTIsU0ZfUGlnVGFpbHNfTS5iYTIsU0ZfUGlnVGFpbHNfVC5iYTIsU0ZfYWVyaXRoX09EX00uYmEyLFNGX2Flcml0aF9PRF9ULmJhMixTY2lGaURvZ19ULmJhMg0KDQpzUmVzb3VyY2VBcmNoaXZlMkxpc3Q9SFVERWRpdG9yX0lIVUQuYmEyLENhbXBCdWRnZXRBbmRCdWlsZGluZ0Nvc3RzLmJhMixGYXN0VGVybWluYWxzLmJhMixFYXN5SGFja2luZy5iYTIsUXVpY2tCb3lYMS4wU0MuYmEyLFBBRnJpZW5kbHlVSS5iYTIsSFVEQ29uZGl0aW9uLmJhMixIVURDb25kaXRpb25fVmF1bHRHaXJsUGFjay5iYTIsSFVEUGxheWVyTGlzdC5iYTIsUGVya0xvYWRvdXRNYW5hZ2VyLUhNTC5iYTIsSW1wcm92ZWRQaXBib3lTdGF0cy5iYTIsQmV0dGVySW52ZW50b3J5LVVPLmJhMixNb2Rlcm5TY29wZXMuYmEyLFZBVFNQcmlvcml0eS5iYTIsSW1wcm92ZWRIQlMyMS5iYTIsQnVmZnNNZXRlci5iYTIsSFVETW9kTG9hZGVyLmJhMiw3NlVsdGltYXRlQXVkaW9PdmVyaGF1bCAtIHYzLmJhMixRdWlja0RyYXc3Ni5iYTIsQXBwYWxhY2hpYVdhcmZhcmUgLSBXZWFwb25zLmJhMixBcHBhbGFjaGlhV2FyZmFyZSAtIEJ1bGxldHMuYmEyLEFwcGFsYWNoaWFXYXJmYXJlIC0gRXhwbG9zaW9ucy5iYTIsSVJHU08uYmEyLEdhdXNzV2VhcG9uRnVsbENoYXJnZVNvdW5kLkJBMixTaWxlbnRFeHBsb3NpdmVCdWxsZXRzLmJhMixETSBBbHRlcm5hdGUgQ2FubmliYWwgU291bmRzLmJhMixTTVRNIFBpY2sgTWUgVXAuYmEyLEJldHRlckNvbGxlY3RpYmxlRmluZGVyU291bmRzLkJBMixFbW90ZSBzb3VuZCByZXBsYWNlcjEuMy5iYTIsTU9EX0JldHRlckV4cGxvc2lvbnMuYmEyLExvY2twaWNrX0xhdWdoX3RyYWNrX21vZC5iYTIsTW9yZUFuaW1hdGlvbnMuYmEyLEFuaW1OZXcuYmEyLFBBX0Zhc3RBTklNLmJhMixsb3dlcmVkX2FkZG9uLmJhMixIb2xzdGVyZWRTcHJpbnRIYW5kcy5CQTIsTWluaWd1bl9SZWZsZXhOdWxsLmJhMixQQS1Ib2xvSFVELmJhMixQUEhtaXhfS0YxLmJhMixNV1IgSGFuZG1hZGUgUmlmbGUgUmVwbGFjZXIgLSBNYWluLmJhMixNV1IgSGFuZG1hZGUgUmlmbGUgUmVwbGFjZXIgLSBUZXh0dXJlcy5iYTIsVDYwbmV3X00uYmEyLFQ2MG5ld19ULmJhMixFVkJfVUEuYmEyLEVWQl9VQU0uYmEyLFRGMiBQdWxzZSBCbGFkZSAtIE1haW4uYmEyLFRGMiBQdWxzZSBCbGFkZSAtIFRleHR1cmVzLmJhMixJbnZpc2lXb29kUGlsZXMuYmEyLFdTX1Rlcm0uYmEyLEZQU0Jvb3N0LmJhMixNb3JlLVZpYnJhbmN5LmJhMixudWNsZXVzLmJhMixFbmNsYXZlRnVzaW9uY29yZS5iYTIsTUdFX00uYmEyLE1HRV9ULmJhMixtNDhfcGF0dG9uX00uYmEyLG00OF9wYXR0b25fVC5iYTIsVlRzcGFfTS5iYTIsVlRzcGFfVC5iYTIsRW5jbGF2ZVJ1Zy5iYTIsSFQwMV9NLmJhMixIVDAxX1QuYmEyLFNTX09EU1RfTS5iYTIsU1NfT0RTVF9ULmJhMixCb2JibGVoZWFkU3RhbmRfTS5iYTIsQm9iYmxlaGVhZFN0YW5kX1QuYmEyLFNHX2RlY29uX00uYmEyLFNHX2RlY29uX1QuYmEyLE0xNkExX0hNX00uYmEyLE0xNkExX0hNX1QuYmEyLE00QTFfQVJfTS5iYTIsTTRBMV9BUl9ULmJhMixzdHJpa2VfTS5iYTIsc3RyaWtlX1QuYmEyLFRDX1Byb3RvX00uYmEyLFRDX1Byb3RvX1QuYmEyLG1hZ3poaXJlc25vbG9nby5iYTINCg0KW0Rpc3BsYXldDQppUHJlc2VudEludGVydmFsPTANCmZET0ZCbGVuZFJhdGlvPTANCmZWQVRTQnJpZ2h0bmVzcz0wLjUNCmZWQVRTT3V0bGluZVRoaWNrbmVzcz0wLjUNCmZWQVRTU2NhbmxpbmVGcmVxdWVuY3k9MTgwLjAwMDAwMA0KZlZBVFNWU2NhblN0YXRlPS00LjAwMDAwMA0KDQpbVkFUU10NCmJWQVRTQmx1cj0wDQpiVkFUU0ZPVkFzRGlzdGFuY2VUb1RhcmdldD0wDQpmVkFUU0FpbVNwcmluZ0RlYWR6b25lU3BlZWQ9MTAwMDAwDQpmVkFUU0FpbVNwcmluZ01heD0xMDAwMDANCmZWQVRTQWltU3ByaW5nTWluPTAuMA0KZlZBVFNBaW1TcHJpbmdTY3JlZW5EZWFkem9uZT0wDQpmVkFUU0JsdXJTdHJlbmd0aD0wDQpmVkFUU0Nsb3NlTWVudVRpbWU9MTAwMDAuMA0KZlZBVFNEaXN0YW5jZU1vZGlmaWVyPTEwDQpmVmF0c0VmZmVjdEJ1cnN0RmFkZVJhdGU9MC4wDQpmVmF0c0VmZmVjdEJ1cnN0SW50ZW5zaXR5PTAuMA0KZlZhdHNFZmZlY3REZWZhdWx0QnVyc3Q9MC4wDQpmVmF0c0VmZmVjdERlZmF1bHRPdXRsaW5lPTENCmZWYXRzRWZmZWN0RmxpY2tlckJyaWdodG5lc3M9LTAuMTAwMDAwMDAxNQ0KZlZhdHNFZmZlY3RGbGlja2VyRGVsYXlNYXg9MTUuMA0KZlZhdHNFZmZlY3RGbGlja2VyRGVsYXlNaW49NS4wDQpmVmF0c0VmZmVjdEZsaWNrZXJEdXJhdGlvbk1heD0wLjYwMDAwMDAyMzgNCmZWYXRzRWZmZWN0RmxpY2tlckR1cmF0aW9uTWluPTAuMTAwMDAwMDAxNA0KZlZhdHNFZmZlY3RGbGlja2VyRnJlcXVlbmN5PTIyLjANCmZWYXRzRWZmZWN0UHVsc2VJbnRlbnNpdHk9MC41DQpmVmF0c0VmZmVjdFB1bHNlUmF0ZT0wLjUNCmZWYXRzRWZmZWN0U2NhbmxpbmVGcmVxdWVuY3k9MC41DQpmVmF0c0VmZmVjdFZlcnRpY2FsU2NhbkRlbGF5TWF4PTENCmZWYXRzRWZmZWN0VmVydGljYWxTY2FuRGVsYXlNaW49MC41DQpmVmF0c0VmZmVjdFZlcnRpY2FsU2NhblJhdGU9MC41DQpmVkFUU0VudGVyU2VjPTAuMA0KZlZBVFNFeGl0U2VjPTAuMA0KZlZBVFNGT1ZSZXZlcnRSYXRlPTANCmZWQVRTSW5pdGlhbFRhcmdldEFuZ2xlV2VpZ2h0PTANCmZWQVRTTGlnaHRBbmdsZT0wLjANCmZWYXRzTGlnaHRDb2xvckI9MC42OTk5OTk5ODgNCmZWYXRzTGlnaHRDb2xvckc9MC42OTk5OTk5ODgNCmZWYXRzTGlnaHRDb2xvclI9MC42OTk5OTk5ODgNCmZWQVRTTGlnaHREaXN0YW5jZT0xMDAuMA0KZlZBVFNMaWdodEVsZXZhdGlvbj0xMDAuMA0KZlZBVFNMaWdodExldmVsTWF4PTQwMC4wDQpmVkFUU0xpZ2h0TGV2ZWxNaW49LTEwMC4wDQpmVkFUU0xvb2tBdEV4dGVudFNwcmluZz00MA0KZlZBVFNMb29rQXRQb3NpdGlvblNwcmluZz00MA0KZlZBVFNNaW5pbXVtVmlzaWJpbGl0eT0wLjANCmZWQVRTT2NjbHVzaW9uUXVlcnlJc3N1ZVNlYz0wDQpmVkFUU1BhcnRDaGFuY2VVcGRhdGVTZWM9MA0KZlZBVFNQYXJ0U2VsZWN0RGlzdGFuY2VXZWlnaHQ9MA0KZlZBVFNQb3RlbnRpYWxUYXJnZXRSYXljYXN0RGlzdD0wDQpmVkFUU1N0YXRpY0ZPVj0wDQpmVkFUU1N0YXRpY0ZPVlNwcmluZz0wDQp1VkFUU1RhcmdldEVmZmVjdENvbG9yQj00OQ0KdVZBVFNUYXJnZXRFZmZlY3RDb2xvckc9MTAwDQp1VkFUU1RhcmdldEVmZmVjdENvbG9yUj0xMA0KZlZBVFNUYXJnZXRTZWxlY3RCb3JkZXI9MzYwDQpmVkFUU1RhcmdldFNlbGVjdE1pbkZPVkRlZ3JlZXM9MzYwDQpmVkFUU1RhcmdldFVwZGF0ZVNlYz0wLjUNCmZWQVRTV2FpdEludHJvRGVsYXk9MA0KZlZBVFNXYWl0V2VhcG9uU2lnaHRlZFJlbGVhc2U9MA==" id="cfg-f76customini" readonly="" spellcheck="false" wrap="off">[General]
 bStreamingWallEnabled=0
 bJobifyMagicUpdate=1
 bUseThreadedBlood=1
@@ -530,9 +526,9 @@ sMainMenuMusic=Data\music\special\mihc_maintheme.xwm
 [Archive]
 sResourceDataDirsFinal=
 bInvalidateOlderFiles=1
-sResourceIndexFileList=MIHCMenu - Music.ba2,FO1AthenaMenu.ba2,FO1Textures08.ba2,TZMap.ba2,D1_2X.ba2,D2_2X.ba2,D3_2X.ba2,D4_2X.ba2,D5_2X.ba2,D6_2X.ba2,D7_2X.ba2,DA1_2X.ba2,DA2_2X.ba2,DA3_2X.ba2,DA4_2X.ba2,O1_2X.ba2,76HDo_n.ba2,FBarSet.ba2,DocOr_M.ba2,DocOr_T.ba2,FancyBedMsh.ba2,FancyBedTx.ba2,APC.ba2,APC_M.ba2,FGB_AiO_M.ba2,FGB_AiO_T.ba2,Fake_Glass_Begone_Dpl_M.ba2,FTB_M.ba2,FTB_T.ba2,NO Scum - Main.ba2,NO Scum - Textures.ba2,Br_Rev_M.ba2,Br_Rev_T.ba2,Br_Rev_Wood.ba2,GH_Rev_M.ba2,GH_Rev_T.ba2,OM_Rev_M.ba2,OM_Rev_T.ba2,GH_Glass_M.ba2,GH_Glass_T.ba2,BetAnim_M.ba2,BetAnim_T.ba2,Beams.ba2,EnhancedBlood - Meshes.ba2,EnhancedBlood - Textures.ba2,EWSplash_Medium.ba2,Props - Main.ba2,Props - Textures.ba2,Better Mirrors_M.ba2,Better Mirrors_T.ba2,windoor.ba2,Diranars_PALight_Up.ba2,CCO76 - Main.ba2,AFR.ba2,2xArmorClothing.ba2,HDFixedBeret.ba2,Nuka_M.ba2,Nuka_T.ba2,2xPowerArmor.ba2,PA_Bundle.ba2,ReconPA_M.ba2,ReconPA_T.ba2,2xWeapons.ba2,AA_M.ba2,AA_T.ba2,Gloomy AIO (All-In-One) 2.2.ba2,4x Workstations.ba2,Fireplaces.ba2,Fire_Extinguisher_old_M.ba2,Fire_Extinguisher_old_T.ba2,WaterSD.ba2,BeltPack.ba2,Heartbags-M.ba2,Heartbags-T.ba2,Heartbags-Fix.ba2,ugly textures gone.ba2,PoA_Lights.ba2,bustv.ba2,SIA_M.ba2,SIA.ba2,EF_M.ba2,EF_T.ba2,plant_glow.ba2,FLORANIM_M.ba2,FLORANIM_T-2K.ba2,PrickeyeGlow.ba2,BHP_M.ba2,ACAB76_hottubM.ba2,ACAB76_hottubT.ba2,EVB76FIX_M.ba2,EVB76FIXG_M.ba2,EVB76FIX_T.ba2,Ghoul Textures.ba2,evb_ghoul_fix_T.ba2,Lost_EVB_Textures.ba2,EVB76_FIX_Lost.ba2,EVB_BAT.ba2,LUnd_M.ba2,LUnd_T.ba2,MaleUnderwear.ba2,WSH_T.ba2,SF_RetroPP_M.ba2,SF_RetroPP_T.ba2,SF_RetroPP_1_M.ba2,ACAB76_corpsesM.ba2,ACAB76_corpsesT.ba2,EyesOfAppalachia.ba2,ScorchedHeadExplosion.ba2,BetterGlowingMoleMiner.ba2,BetterWendigos.ba2,Scorched Scorchbeasts.ba2,USBQ-8-Starship_Main.ba2,USBQ_Textures.ba2,USBQ_BrighterWings4K.ba2,HDDoormat.ba2,NukaColaDoorGlassFix.ba2,ProtectronGlassFix.ba2,Alien glass fix.ba2,AoS_Aquarium.ba2,AoS_Aquarium_T.ba2,PrettySkyM.ba2,PrettySkyT.ba2,P80jet_M.ba2,P80jet_T.ba2,VB02_M.ba2,VB02_T.ba2,Quality CubeMaps - HD Cube Maps.ba2,STS_M.ba2,STS_T.ba2,VTmaskA_surg_M.ba2,VTmaskA_surg_T.ba2,SF_BK_AiO_M.ba2,SF_BK_AiO_T.ba2,sci-fi-panels_M.ba2,sci-fi-panels_T.ba2,BLB_M.ba2,BLB_T.ba2,LStringCB19_M.ba2,LStringCB19_T.ba2,LStringCB19_TT.ba2,SF_CrossB_M.ba2,SF_CrossB_T.ba2,securitron_vendorbot.ba2,AoS_PottedPlant_Tex.ba2,AoS_PottedPlant_Set06.ba2,FishTank_M.ba2,FishTank_T.ba2,HBrah_M.ba2,HBrah_T.ba2,TMummy_M.ba2,TMummy_T.ba2,Monno_Bikini_M.ba2,Monno_Bikini_T.ba2,PerkBoardTexRep.BA2,PerkBoardTexRep2.BA2,WillowTreeM.ba2,WillowTreeT.ba2,scifi_AD_M.ba2,scifi_AD_T.ba2,ScrapM.ba2,ScrapT.ba2,ASB_M.ba2,ASB_T.ba2,Sci-Fi_ACT_M.ba2,Sci-Fi_ACT_T.ba2,SF_quiet_M.ba2,SF_quiet_T.ba2,SF_Ines_M.ba2,SF_Ines_T.ba2,SF_MR_M.ba2,SF_MR_T.ba2,SF_SP_M.ba2,SF_SP_T.ba2,LightFixtures - Main.ba2,LightFixtures - Textures.ba2,EncFoun.ba2,EncPer.ba2,MarineAPC_M.ba2,MarineAPC_T.ba2,Metal_Barrels.ba2,BoS_Tac_Backpack.ba2,TV_Fix_M.ba2,TV_Fix_T.ba2,Amiga_M.ba2,Amiga_T.ba2,RLP.ba2,PepperShakerBlackRed.ba2,BetterLodge.ba2,BetterLodge_T.ba2,CookingStove - RedLess.ba2,Kitchenset - Textures.ba2,SF_CPL_M.ba2,SF_CPL_T.ba2,MilitaryMaps.ba2,BetterGITDMap.ba2,bobber_M.ba2,bobber_T.ba2,bobber_G.ba2,Glowing CSP Bobbers.ba2,Lightbulb_Bobber_M.ba2,Lightbulb_Bobber_T.ba2,Glow.ba2,GlowMapFragments.ba2,Better_BH_M.ba2,Better_BH_T.ba2,GlowingGlowingBobbleheads.ba2,GlowingKeys.ba2,Mainframe_Cores_Glow.ba2,Glowing Scorched.ba2,BobbleGlow.ba2,CapsTin.ba2,ore_glow.ba2,CP_panam_M.ba2,CP_panam_T.ba2,ESP_TeddyBears.ba2,FS_M.ba2,FS_T.ba2,gloria_M.ba2,gloria_T.ba2,LeatherS_M.ba2,LeatherS_T.ba2,Lilly_M.ba2,Lilly_T.ba2,MagDag_M.ba2,MagDag_T.ba2,Pirate_M.ba2,Pirate_T.ba2,VH_T.ba2,ASL_T.ba2,VCHA_M.ba2,VCHA_T.ba2,SF_PigTails_M.ba2,SF_PigTails_T.ba2,SciFiDog_T.ba2
+sResourceIndexFileList=MIHCMenu - Music.ba2,FO1AthenaMenu.ba2,FO1Textures08.ba2,TZMap.ba2,D1_2X.ba2,D2_2X.ba2,D3_2X.ba2,D4_2X.ba2,D5_2X.ba2,D6_2X.ba2,D7_2X.ba2,DA1_2X.ba2,DA2_2X.ba2,DA3_2X.ba2,DA4_2X.ba2,O1_2X.ba2,76HDo_n.ba2,FBarSet.ba2,DocOr_M.ba2,DocOr_T.ba2,FancyBedMsh.ba2,FancyBedTx.ba2,APC.ba2,APC_M.ba2,FGB_AiO_M.ba2,FGB_AiO_T.ba2,Fake_Glass_Begone_Dpl_M.ba2,FTB_M.ba2,FTB_T.ba2,NO Scum - Main.ba2,NO Scum - Textures.ba2,Br_Rev_M.ba2,Br_Rev_T.ba2,Br_Rev_Wood.ba2,GH_Rev_M.ba2,GH_Rev_T.ba2,OM_Rev_M.ba2,OM_Rev_T.ba2,GH_Glass_M.ba2,GH_Glass_T.ba2,BetAnim_M.ba2,BetAnim_T.ba2,Beams.ba2,EnhancedBlood - Meshes.ba2,EnhancedBlood - Textures.ba2,EWSplash_Medium.ba2,EncFoun.ba2,EncPer.ba2,Props - Main.ba2,Props - Textures.ba2,Better Mirrors_M.ba2,Better Mirrors_T.ba2,windoor.ba2,Diranars_PALight_Up.ba2,CCO76 - Main.ba2,AFR.ba2,2xArmorClothing.ba2,HDFixedBeret.ba2,Nuka_M.ba2,Nuka_T.ba2,2xPowerArmor.ba2,PA_Bundle.ba2,ReconPA_M.ba2,ReconPA_T.ba2,2xWeapons.ba2,AA_M.ba2,AA_T.ba2,Gloomy AIO (All-In-One) 2.2.ba2,4x Workstations.ba2,Fireplaces.ba2,Fire_Extinguisher_old_M.ba2,Fire_Extinguisher_old_T.ba2,WaterSD.ba2,BeltPack.ba2,Heartbags-M.ba2,Heartbags-T.ba2,Heartbags-Fix.ba2,ugly textures gone.ba2,PoA_Lights.ba2,bustv.ba2,SIA_M.ba2,SIA.ba2,EF_M.ba2,EF_T.ba2,plant_glow.ba2,FLORANIM_M.ba2,FLORANIM_T-2K.ba2,PrickeyeGlow.ba2,BHP_M.ba2,ACAB76_hottubM.ba2,ACAB76_hottubT.ba2,EVB76FIX_M.ba2,EVB76FIXG_M.ba2,EVB76FIX_T.ba2,Ghoul Textures.ba2,evb_ghoul_fix_T.ba2,Lost_EVB_Textures.ba2,EVB76_FIX_Lost.ba2,EVB_BAT.ba2,LUnd_M.ba2,LUnd_T.ba2,MaleUnderwear.ba2,WSH_T.ba2,SF_RetroPP_M.ba2,SF_RetroPP_T.ba2,SF_RetroPP_1_M.ba2,ACAB76_corpsesM.ba2,ACAB76_corpsesT.ba2,EyesOfAppalachia.ba2,ScorchedHeadExplosion.ba2,BetterGlowingMoleMiner.ba2,BetterWendigos.ba2,Scorched Scorchbeasts.ba2,USBQ-8-Starship_Main.ba2,USBQ_Textures.ba2,USBQ_BrighterWings4K.ba2,HDDoormat.ba2,NukaColaDoorGlassFix.ba2,ProtectronGlassFix.ba2,Alien glass fix.ba2,AoS_Aquarium.ba2,AoS_Aquarium_T.ba2,PrettySkyM.ba2,PrettySkyT.ba2,P80jet_M.ba2,P80jet_T.ba2,VB02_M.ba2,VB02_T.ba2,Quality CubeMaps - HD Cube Maps.ba2,STS_M.ba2,STS_T.ba2,VTmaskA_surg_M.ba2,VTmaskA_surg_T.ba2,SF_BK_AiO_M.ba2,SF_BK_AiO_T.ba2,sci-fi-panels_M.ba2,sci-fi-panels_T.ba2,BLB_M.ba2,BLB_T.ba2,LStringCB19_M.ba2,LStringCB19_T.ba2,LStringCB19_TT.ba2,SF_CrossB_M.ba2,SF_CrossB_T.ba2,securitron_vendorbot.ba2,AoS_PottedPlant_Tex.ba2,AoS_PottedPlant_Set06.ba2,FishTank_M.ba2,FishTank_T.ba2,HBrah_M.ba2,HBrah_T.ba2,TMummy_M.ba2,TMummy_T.ba2,Monno_Bikini_M.ba2,Monno_Bikini_T.ba2,PerkBoardTexRep.BA2,PerkBoardTexRep2.BA2,WillowTreeM.ba2,WillowTreeT.ba2,scifi_AD_M.ba2,scifi_AD_T.ba2,ScrapM.ba2,ScrapT.ba2,ASB_M.ba2,ASB_T.ba2,Sci-Fi_ACT_M.ba2,Sci-Fi_ACT_T.ba2,SF_quiet_M.ba2,SF_quiet_T.ba2,SF_Ines_M.ba2,SF_Ines_T.ba2,SF_MR_M.ba2,SF_MR_T.ba2,SF_SP_M.ba2,SF_SP_T.ba2,LightFixtures - Main.ba2,LightFixtures - Textures.ba2,MarineAPC_M.ba2,MarineAPC_T.ba2,Metal_Barrels.ba2,BoS_Tac_Backpack.ba2,TV_Fix_M.ba2,TV_Fix_T.ba2,Amiga_M.ba2,Amiga_T.ba2,RLP.ba2,PepperShakerBlackRed.ba2,BetterLodge.ba2,BetterLodge_T.ba2,CookingStove - RedLess.ba2,Kitchenset - Textures.ba2,SF_CPL_M.ba2,SF_CPL_T.ba2,MilitaryMaps.ba2,BetterGITDMap.ba2,bobber_M.ba2,bobber_T.ba2,bobber_G.ba2,Glowing CSP Bobbers.ba2,Lightbulb_Bobber_M.ba2,Lightbulb_Bobber_T.ba2,Glow.ba2,GlowMapFragments.ba2,Better_BH_M.ba2,Better_BH_T.ba2,GlowingGlowingBobbleheads.ba2,GlowingKeys.ba2,Mainframe_Cores_Glow.ba2,Glowing Scorched.ba2,BobbleGlow.ba2,CapsTin.ba2,ore_glow.ba2,CP_panam_M.ba2,CP_panam_T.ba2,ESP_TeddyBears.ba2,FS_M.ba2,FS_T.ba2,gloria_M.ba2,gloria_T.ba2,LeatherS_M.ba2,LeatherS_T.ba2,Lilly_M.ba2,Lilly_T.ba2,MagDag_M.ba2,MagDag_T.ba2,Pirate_M.ba2,Pirate_T.ba2,VH_T.ba2,ASL_T.ba2,CleanAxoAquarium_M.ba2,CleanAxoAquarium_T.ba2,VCHA_M.ba2,VCHA_T.ba2,SF_PigTails_M.ba2,SF_PigTails_T.ba2,SF_aerith_OD_M.ba2,SF_aerith_OD_T.ba2,SciFiDog_T.ba2
 
-sResourceArchive2List=HUDEditor_IHUD.ba2,CampBudgetAndBuildingCosts.ba2,FastTerminals.ba2,EasyHacking.ba2,QuickBoyX1.0SC.ba2,PAFriendlyUI.ba2,HUDCondition.ba2,HUDCondition_VaultGirlPack.ba2,HUDPlayerList.ba2,PerkLoadoutManager-HML.ba2,ImprovedPipboyStats.ba2,BetterInventory-UO.ba2,ModernScopes.ba2,loadingScreenOverhaul_smaller_v0.2.ba2,VATSPriority.ba2,ImprovedHBS21.ba2,BuffsMeter.ba2,HUDModLoader.ba2,76UltimateAudioOverhaul - v3.ba2,QuickDraw76.ba2,AppalachiaWarfare - Weapons.ba2,AppalachiaWarfare - Bullets.ba2,AppalachiaWarfare - Explosions.ba2,IRGSO.ba2,GaussWeaponFullChargeSound.BA2,SilentExplosiveBullets.ba2,DM Alternate Cannibal Sounds.ba2,SMTM Pick Me Up.ba2,BetterCollectibleFinderSounds.BA2,Emote sound replacer1.3.ba2,MOD_BetterExplosions.ba2,Lockpick_Laugh_track_mod.ba2,MoreAnimations.ba2,AnimNew.ba2,PA_FastANIM.ba2,lowered_addon.ba2,HolsteredSprintHands.BA2,Minigun_ReflexNull.ba2,PA-HoloHUD.ba2,PPHmix_KF1.ba2,MWR Handmade Rifle Replacer - Main.ba2,MWR Handmade Rifle Replacer - Textures.ba2,T60new_M.ba2,T60new_T.ba2,EVB_UA.ba2,EVB_UAM.ba2,TF2 Pulse Blade - Main.ba2,TF2 Pulse Blade - Textures.ba2,InvisiWoodPiles.ba2,WS_Term.ba2,FPSBoost.ba2,More-Vibrancy.ba2,nucleus.ba2,EnclaveFusioncore.ba2,MGE_M.ba2,MGE_T.ba2,m48_patton_M.ba2,m48_patton_T.ba2,VTspa_M.ba2,VTspa_T.ba2,EnclaveRug.ba2,HT01_M.ba2,HT01_T.ba2,SS_ODST_M.ba2,SS_ODST_T.ba2,BobbleheadStand_M.ba2,BobbleheadStand_T.ba2,SG_decon_M.ba2,SG_decon_T.ba2,M16A1_HM_M.ba2,M16A1_HM_T.ba2,M4A1_AR_M.ba2,M4A1_AR_T.ba2,strike_M.ba2,TC_Proto_M.ba2,TC_Proto_T.ba2,magzhiresnologo.ba2
+sResourceArchive2List=HUDEditor_IHUD.ba2,CampBudgetAndBuildingCosts.ba2,FastTerminals.ba2,EasyHacking.ba2,QuickBoyX1.0SC.ba2,PAFriendlyUI.ba2,HUDCondition.ba2,HUDCondition_VaultGirlPack.ba2,HUDPlayerList.ba2,PerkLoadoutManager-HML.ba2,ImprovedPipboyStats.ba2,BetterInventory-UO.ba2,ModernScopes.ba2,VATSPriority.ba2,ImprovedHBS21.ba2,BuffsMeter.ba2,HUDModLoader.ba2,76UltimateAudioOverhaul - v3.ba2,QuickDraw76.ba2,AppalachiaWarfare - Weapons.ba2,AppalachiaWarfare - Bullets.ba2,AppalachiaWarfare - Explosions.ba2,IRGSO.ba2,GaussWeaponFullChargeSound.BA2,SilentExplosiveBullets.ba2,DM Alternate Cannibal Sounds.ba2,SMTM Pick Me Up.ba2,BetterCollectibleFinderSounds.BA2,Emote sound replacer1.3.ba2,MOD_BetterExplosions.ba2,Lockpick_Laugh_track_mod.ba2,MoreAnimations.ba2,AnimNew.ba2,PA_FastANIM.ba2,lowered_addon.ba2,HolsteredSprintHands.BA2,Minigun_ReflexNull.ba2,PA-HoloHUD.ba2,PPHmix_KF1.ba2,MWR Handmade Rifle Replacer - Main.ba2,MWR Handmade Rifle Replacer - Textures.ba2,T60new_M.ba2,T60new_T.ba2,EVB_UA.ba2,EVB_UAM.ba2,TF2 Pulse Blade - Main.ba2,TF2 Pulse Blade - Textures.ba2,InvisiWoodPiles.ba2,WS_Term.ba2,FPSBoost.ba2,More-Vibrancy.ba2,nucleus.ba2,EnclaveFusioncore.ba2,MGE_M.ba2,MGE_T.ba2,m48_patton_M.ba2,m48_patton_T.ba2,VTspa_M.ba2,VTspa_T.ba2,EnclaveRug.ba2,HT01_M.ba2,HT01_T.ba2,SS_ODST_M.ba2,SS_ODST_T.ba2,BobbleheadStand_M.ba2,BobbleheadStand_T.ba2,SG_decon_M.ba2,SG_decon_T.ba2,M16A1_HM_M.ba2,M16A1_HM_T.ba2,M4A1_AR_M.ba2,M4A1_AR_T.ba2,strike_M.ba2,strike_T.ba2,TC_Proto_M.ba2,TC_Proto_T.ba2,magzhiresnologo.ba2
 
 [Display]
 iPresentInterval=0
@@ -596,8 +592,7 @@ fVATSTargetSelectBorder=360
 fVATSTargetSelectMinFOVDegrees=360
 fVATSTargetUpdateSec=0.5
 fVATSWaitIntroDelay=0
-fVATSWaitWeaponSightedRelease=0
-</textarea>
+fVATSWaitWeaponSightedRelease=0</textarea>
 </div>
 </details>
 <!-- 953 -->
@@ -3418,6 +3413,75 @@ HUD_X=-1
 HUD_Y=1</textarea>
 </div>
 </details>
+<!-- 3006-empty -->
+<details>
+<summary>
+<div class="title">
+<strong>perkloadoutmanager.ini file</strong>
+</div>
+<div class="actions">
+<button aria-label="Copy config — PLM Empty Starter" class="primary" data-copy-target="cfg-3006-empty" type="button">Copy config</button><button aria-label="Download file — PLM Empty Starter" class="secondary" data-copy-target="cfg-3006-empty" data-download="perkloadoutmanager.ini" type="button">Download file</button>
+</div>
+</summary>
+<div class="content">
+<div class="desc big">Don&#x27;t have a <code>perkloadoutmanager.ini</code> yet? Skip Nexus &mdash; their &quot;EMPTY&quot; download on mod 3006 is still labeled <code>version=2</code>, which is outdated and won&#x27;t match the loadout config above. Use this instead:<br/>
+1. Click <strong>Download file</strong> above and save it as <code>perkloadoutmanager.ini</code>.<br/>
+2. Place it directly in your <code>Data</code> folder.<br/>
+3. Launch the game once and fully load into a public server before editing it &mdash; PLM needs that session to initialize.<br/>
+4. Exit, then paste your Config Hub loadout config (from the section above) underneath the existing lines, save, and relaunch.<br/>
+5. Test at a Punch Card Machine by clicking one of your saved loadouts.</div>
+<textarea class="cfg" data-b64="dmVyc2lvbj0zCkhVRF9DRU5UUkVPUklHSU49ZmFsc2UKSFVEX1g9LTEKSFVEX1k9MQ==" id="cfg-3006-empty" readonly="" spellcheck="false" wrap="off">version=3
+HUD_CENTREORIGIN=false
+HUD_X=-1
+HUD_Y=1</textarea>
+</div>
+</details>
+<!-- Changelog -->
+<details>
+<summary>
+<div class="title">
+<strong>Changelog - Revision 33</strong>
+</div>
+</summary>
+<div class="content">
+<div class="desc big">
+&#10133; Added clean black aquarium with gold light<br/>
+&#10133; Added ordinary dress hair<br/>
+<br/>
+&#128295; Fixed Sci-Fi Ammomatic and Vending Machine glowing issue<br/>
+<br/>
+&#9881;&#65039; Refined INI<br/>
+<br/>
+&#128260; Changed red loot bag to yellow
+</div>
+</div>
+</details>
+<!-- Troubleshooting -->
+<details>
+<summary>
+<div class="title">
+<strong>Troubleshooting - Common Issues</strong>
+</div>
+</summary>
+<div class="content">
+<div class="desc big"><strong>ZFE not loading (no console overlay, no zfe.log):</strong><br/>
+&bull; Confirm ZFE is installed and enabled in Vortex, then Deploy Mods.<br/>
+&bull; Vortex deploys <code>dxgi.dll</code> to <code>Data</code> first &mdash; move it into your game <strong>root</strong> folder (next to <code>Fallout76.exe</code> on Steam, or <code>Project76_GamePass.exe</code> on Game Pass). It does nothing sitting in <code>Data</code>.<br/>
+&bull; If <code>dxgi.dll</code> is missing from <code>Data</code> entirely, your antivirus likely deleted it &mdash; add a folder exclusion for your Fallout 76 folder, then re-download ZFE from Nexus and place it in root.<br/>
+&bull; Right-click <code>dxgi.dll</code> &rarr; Properties &rarr; tick &quot;Unblock&quot; if the option is present.<br/>
+&bull; Confirm it worked: launch from Steam, load into the world, and check for a <code>zfe.log</code> file in the game folder.</div>
+<div class="desc big"><strong>IconSortingTags icons look wrong / blocky / &quot;lookup failed&quot;:</strong><br/>
+&bull; The replacement <code>SeventySix - Interface_en.ba2</code> must go directly in <code>Data</code> (not <code>Data\Interface</code>), named exactly &mdash; no <code>(1)</code> or extra file extension.<br/>
+&bull; Fully close and relaunch the game after replacing it.<br/>
+&bull; Reinstall the file after every game update &mdash; Steam&#x27;s &quot;Verify integrity&quot; reverts it to vanilla.</div>
+<div class="desc big"><strong>Perk Loadout Manager loadouts won&#x27;t save/load, or perkloadoutmanager.ini is missing:</strong><br/>
+&bull; Don&#x27;t grab the empty template from Nexus mod 3006 &mdash; it&#x27;s still labeled <code>version=2</code>, which is outdated and won&#x27;t match the loadout config below. Use the <strong>perkloadoutmanager.ini file</strong> section above instead and place it in your <code>Data</code> folder.<br/>
+&bull; Launch the game once and fully load into a public server before editing the ini &mdash; PLM needs that session to initialize it.<br/>
+&bull; Exit, then open <code>perkloadoutmanager.ini</code> and confirm the top line reads <code>version=3</code>. If you started from an old Nexus template and it still says <code>version=2</code>, change it to <code>version=3</code> &mdash; the loadout data on this page is formatted for version=3 and won&#x27;t populate correctly under a version=2 header.<br/>
+&bull; Paste your Config Hub PLM setup directly underneath <code>version=3</code>, save, and relaunch.<br/>
+&bull; Test at a Punch Card Machine by clicking one of your saved loadouts &mdash; your equipped perk cards should switch instantly to that loadout.</div>
+</div>
+</details>
 <!-- 3144 -->
 <details>
 <summary>
@@ -3569,141 +3633,4 @@ downloadBytes(filename, bytes);
     function bytesFromBase64(b64){
       const bin = atob(b64);
       const out = new Uint8Array(bin.length);
-      for(let i=0;i<bin.length;i++) out[i] = bin.charCodeAt(i);
-      return out;
-    }
-
-    function getPayload(el){
-      const b64 = el.getAttribute("data-b64");
-      if(b64){
-        const bytes = bytesFromBase64(b64);
-        const text = new TextDecoder("utf-8").decode(bytes);
-        return { text, bytes };
-      }
-      const text = (el.tagName === "TEXTAREA") ? el.value : el.textContent;
-      const bytes = new TextEncoder().encode(text);
-      return { text, bytes };
-    }
-
-    async function copyPlainText(text){
-      // Best path: ClipboardItem + Blob
-      try{
-        if(navigator.clipboard && window.ClipboardItem){
-          const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
-          await navigator.clipboard.write([ new ClipboardItem({ "text/plain": blob }) ]);
-          return true;
-        }
-      }catch(_){ /* fall through */ }
-
-      // Fallback: writeText
-      try{
-        if(navigator.clipboard){
-          await navigator.clipboard.writeText(text);
-          return true;
-        }
-      }catch(_){ /* fall through */ }
-
-      // Last resort: execCommand('copy')
-      try{
-        const ta = document.createElement("textarea");
-        ta.value = text;
-        ta.setAttribute("readonly", "");
-        ta.style.position = "fixed";
-        ta.style.left = "-9999px";
-        ta.style.top = "0";
-        ta.style.opacity = "0";
-        document.body.appendChild(ta);
-        ta.focus();
-        ta.select();
-        const ok = document.execCommand("copy");
-        document.body.removeChild(ta);
-        return !!ok;
-      }catch(_){
-        return false;
-      }
-    }
-
-    function downloadBytes(filename, bytes){
-      const blob = new Blob([bytes], { type: "application/octet-stream" });
-      const url = URL.createObjectURL(blob);
-
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = filename || "config.txt";
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-
-      setTimeout(()=>URL.revokeObjectURL(url), 0);
-    }
-
-    document.addEventListener("click", async (e) => {
-      const btn = e.target.closest("button");
-      if(!btn) return;
-
-      const targetId = btn.getAttribute("data-copy-target");
-      const jump = btn.getAttribute("data-open");
-      const dlName = btn.getAttribute("data-download");
-
-      if(dlName && targetId){
-        e.preventDefault();
-        e.stopPropagation();
-        const el = document.getElementById(targetId) || document.getElementById(String(targetId).replace(/^#/,"")) || document.querySelector(targetId) || document.querySelector("#"+String(targetId).replace(/^#/,""));
-        if(!el){ showToast(`Missing target: ${targetId}`); return; }
-        const payload = getPayload(el);
-        downloadBytes(dlName, payload.bytes);
-        showToast(`Downloaded ${dlName}`);
-        pulseButton(btn, "Downloaded");
-        return;
-      }
-
-      if(targetId){
-        e.preventDefault();
-        e.stopPropagation();
-        const el = document.getElementById(targetId) || document.getElementById(String(targetId).replace(/^#/,"")) || document.querySelector(targetId) || document.querySelector("#"+String(targetId).replace(/^#/,""));
-        if(!el){ showToast(`Missing target: ${targetId}`); return; }
-        const payload = getPayload(el);
-        const ok = await copyPlainText(payload.text);
-        showToast(ok ? "Copied config (exact)." : "Copy blocked by browser.");
-        pulseButton(btn, ok ? "Copied" : "Blocked");
-        return;
-      }
-
-      if(jump){
-        e.preventDefault();
-        e.stopPropagation();
-        const sel = String(jump);
-        const el = document.querySelector(sel) || document.getElementById(sel.replace(/^#/, "")) || document.querySelector("#"+sel.replace(/^#/, ""));
-        if(!el){ showToast("Target not found."); return; }
-        el.scrollIntoView({behavior:"smooth", block:"center"});
-        const focusEl = (el.matches && el.matches("textarea, input, select, button, a[href]")) ? el : el.querySelector && el.querySelector("textarea, input, select, button, a[href]");
-        if(focusEl && focusEl.focus) focusEl.focus({preventScroll:true});
-        return;
-      }
-    });
-
-  
-
-// Toolbar: search / copy all / download all
-    const search = document.getElementById("cfgSearch");
-    const copyAllBtn = document.getElementById("copyAll");
-    const downloadAllBtn = document.getElementById("downloadAll");
-
-    if(search){
-      let t=null;
-      search.addEventListener("input", (e)=>{
-        clearTimeout(t);
-        t=setTimeout(()=>filterConfigs(e.target.value), 80);
-      }, {passive:true});
-    }
-    if(copyAllBtn){
-      copyAllBtn.addEventListener("click", (e)=>{ e.preventDefault(); copyAllVisible(copyAllBtn); });
-    }
-    if(downloadAllBtn){
-      downloadAllBtn.addEventListener("click", (e)=>{ e.preventDefault(); downloadAllSeparate(downloadAllBtn); });
-    }
-
-})();
-</script>
-</body>
-</html>
+      for(
