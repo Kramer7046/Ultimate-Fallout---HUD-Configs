@@ -3628,9 +3628,144 @@ downloadBytes(filename, bytes);
         const hit = !query || title.includes(query) || body.includes(query);
         d.style.display = hit ? "" : "none";
       }
-    }
-
     function bytesFromBase64(b64){
       const bin = atob(b64);
       const out = new Uint8Array(bin.length);
-      for(
+      for(let i=0;i<bin.length;i++) out[i] = bin.charCodeAt(i);
+      return out;
+    }
+
+    function getPayload(el){
+      const b64 = el.getAttribute("data-b64");
+      if(b64){
+        const bytes = bytesFromBase64(b64);
+        const text = new TextDecoder("utf-8").decode(bytes);
+        return { text, bytes };
+      }
+      const text = (el.tagName === "TEXTAREA") ? el.value : el.textContent;
+      const bytes = new TextEncoder().encode(text);
+      return { text, bytes };
+    }
+
+    async function copyPlainText(text){
+      // Best path: ClipboardItem + Blob
+      try{
+        if(navigator.clipboard && window.ClipboardItem){
+          const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+          await navigator.clipboard.write([ new ClipboardItem({ "text/plain": blob }) ]);
+          return true;
+        }
+      }catch(_){ /* fall through */ }
+
+      // Fallback: writeText
+      try{
+        if(navigator.clipboard){
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+      }catch(_){ /* fall through */ }
+
+      // Last resort: execCommand('copy')
+      try{
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        ta.style.top = "0";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        const ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+        return !!ok;
+      }catch(_){
+        return false;
+      }
+    }
+
+    function downloadBytes(filename, bytes){
+      const blob = new Blob([bytes], { type: "application/octet-stream" });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename || "config.txt";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+
+      setTimeout(()=>URL.revokeObjectURL(url), 0);
+    }
+
+    document.addEventListener("click", async (e) => {
+      const btn = e.target.closest("button");
+      if(!btn) return;
+
+      const targetId = btn.getAttribute("data-copy-target");
+      const jump = btn.getAttribute("data-open");
+      const dlName = btn.getAttribute("data-download");
+
+      if(dlName && targetId){
+        e.preventDefault();
+        e.stopPropagation();
+        const el = document.getElementById(targetId) || document.getElementById(String(targetId).replace(/^#/,"")) || document.querySelector(targetId) || document.querySelector("#"+String(targetId).replace(/^#/,""));
+        if(!el){ showToast(`Missing target: ${targetId}`); return; }
+        const payload = getPayload(el);
+        downloadBytes(dlName, payload.bytes);
+        showToast(`Downloaded ${dlName}`);
+        pulseButton(btn, "Downloaded");
+        return;
+      }
+
+      if(targetId){
+        e.preventDefault();
+        e.stopPropagation();
+        const el = document.getElementById(targetId) || document.getElementById(String(targetId).replace(/^#/,"")) || document.querySelector(targetId) || document.querySelector("#"+String(targetId).replace(/^#/,""));
+        if(!el){ showToast(`Missing target: ${targetId}`); return; }
+        const payload = getPayload(el);
+        const ok = await copyPlainText(payload.text);
+        showToast(ok ? "Copied config (exact)." : "Copy blocked by browser.");
+        pulseButton(btn, ok ? "Copied" : "Blocked");
+        return;
+      }
+
+      if(jump){
+        e.preventDefault();
+        e.stopPropagation();
+        const sel = String(jump);
+        const el = document.querySelector(sel) || document.getElementById(sel.replace(/^#/, "")) || document.querySelector("#"+sel.replace(/^#/, ""));
+        if(!el){ showToast("Target not found."); return; }
+        el.scrollIntoView({behavior:"smooth", block:"center"});
+        const focusEl = (el.matches && el.matches("textarea, input, select, button, a[href]")) ? el : el.querySelector && el.querySelector("textarea, input, select, button, a[href]");
+        if(focusEl && focusEl.focus) focusEl.focus({preventScroll:true});
+        return;
+      }
+    });
+
+  
+
+// Toolbar: search / copy all / download all
+    const search = document.getElementById("cfgSearch");
+    const copyAllBtn = document.getElementById("copyAll");
+    const downloadAllBtn = document.getElementById("downloadAll");
+
+    if(search){
+      let t=null;
+      search.addEventListener("input", (e)=>{
+        clearTimeout(t);
+        t=setTimeout(()=>filterConfigs(e.target.value), 80);
+      }, {passive:true});
+    }
+    if(copyAllBtn){
+      copyAllBtn.addEventListener("click", (e)=>{ e.preventDefault(); copyAllVisible(copyAllBtn); });
+    }
+    if(downloadAllBtn){
+      downloadAllBtn.addEventListener("click", (e)=>{ e.preventDefault(); downloadAllSeparate(downloadAllBtn); });
+    }
+
+})();
+</script>
+</body>
+</html>
