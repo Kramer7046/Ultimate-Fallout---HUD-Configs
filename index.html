@@ -3628,6 +3628,8 @@ downloadBytes(filename, bytes);
         const hit = !query || title.includes(query) || body.includes(query);
         d.style.display = hit ? "" : "none";
       }
+    }
+
     function bytesFromBase64(b64){
       const bin = atob(b64);
       const out = new Uint8Array(bin.length);
